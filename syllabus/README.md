@@ -102,3 +102,82 @@ These building blocks will allow you to better understand the alternative approa
 - :microscope: __Lab 6__: [PCR and PLSR](../labs/lab06-pcr-pls-regression.pdf) (Feb-26)
 - :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
 
+-----
+
+## Regression: Penalized Methods
+
+- :card_index: __Dates__: Feb 26-Mar 02
+- :paperclip: __Topics__: One method of creating biased regression models is to add a penalty to the sum of squared residuals. This is done to control the magnitude of the parameters. By sacrificing some bias, we can often reduce the variance enough to make the overall MSE lower than unbiased models. 
+- :file_folder: __Notes__:
+    + [Ridge Regression](../slides/19-ridge-regression.pdf) (RR)
+    + [Regularization](../slides/20-regularization.pdf) (slides by Hastie and Tibshirani)
+        + Variable Selection
+        + Least Absolute Shrinkage and Selection Operator (Lasso)
+- :book: __Reading__:
+    + ISL 6.2
+    + APM 6.4
+- :microscope: __Lab 7__: [RR and Lasso](../labs/lab07-ridge-lasso.pdf) (Mar-05)
+
+-----
+
+## Regression Overview and transition to Classification
+
+- :card_index: __Dates__: Mar 05-09
+- :paperclip: __Topics__: Overview of linear regression models with discussion of a set of continuum regression approaches. We will also transition into Classification methods with the introduction to Logistic Regression.
+- :file_folder: __Notes__:
+    + Continuum Regression Discussion (chalk and talk)
+    + [Logistic Regression (part I)](../slides/22-logistic-regression1.pdf)
+    + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
+- :book: __Reading__:
+    + ISL 4.1-4.3
+    + APM 12.2
+- :microscope: __Lab 8__: [Logistic Regression](../labs/lab08-logistic-regression.pdf) (Mar-12)
+- :dart: __HW 4:__ Problem Set 4 (due: Mar-16 before midnight)
+- :mortar_board: __MIDTERM 1__: Friday Mar-09
+
+-----
+
+## Classification: Geometric Discriminant Analysis
+
+- :card_index: __Dates__: Mar 12-16
+- :paperclip: __Topics__: The origins and foundations of Discriminant Analysis (DA) are based on Ronald Fisher's geometric approach. This can be considered as classification with an unsupervised touch.
+- :file_folder: __Notes__:
+    + [Preamble to Discriminant Analysis](../slides/24-discriminant-preamble.pdf)
+    + [Geometric Discriminant Analysis (part I)](../slides/25-geometric-discriminant1.pdf)
+    + [Geometric Discriminant Analysis (part II)](../slides/26-geometric-discriminant2.pdf)
+- :book: __Reading__: ISL 4.4; APM 12.3
+- :microscope: __Lab 9__: [Discriminant Analysis](../labs/lab09-lda-qda.pdf) (Mar-19)
+
+-----
+
+## Classification: Probabilistic Discriminant Analysis
+
+- :card_index: __Dates__: Mar 19-23
+- :paperclip: __Topics__: Presentation of the probabilistic framework for classiciation purposes with the so-called Bayes Classifier. We move on from geometric DA to Probabilistic DA, and also discuss the non-parametric method kNN.
+- :file_folder: __Notes__:
+    + [Classification](../slides/27-classification.pdf) (slides by Hastie and Tibshirani)
+        + Bayes Classifier
+        + Linear and Quadratic Discriminant Analysis
+        + K-Nearest Neighbors (kNN)
+- :book: __Reading__:
+    + ISL 4.4
+    + APM 13.5
+- :microscope: __Lab 10__: [Comparing Classification Methods](../labs/lab10-knn.pdf) (Apr-02)
+- :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
+
+-----
+
+## Classification: Statistical Learning Concepts
+
+- :card_index: __Dates__: Apr 02-06
+- :paperclip: __Topics__: Summary of classifications methods, and introduction to decision trees.
+- :file_folder: __Notes__:
+    + Discriminant Analysis Synthesis (chalk and talk)
+    + [Classification Performance Measures](../apps/roc-curve/roc-curve-apm.md)
+    + [Introduction to Decision Trees](../slides/28-trees-introduction.pdf)
+- :book: __Reading__:
+    + ISL 4
+    + APM 11
+- :microscope: __Lab 11__: [ROC Curve and SVM](../labs/lab11-svm.pdf) (Apr-09)
+
+-----
