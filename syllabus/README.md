@@ -63,11 +63,11 @@
     + [A bit of history](../slides/10-history-regression.pdf)
     + [Simple OLS regression](../slides/11-ols-regression1.pdf)
     + [Multiple OLS regression](../slides/12-ols-regression2.pdf)
-- :book: __Reading__: ISL 3; APM 6.1-6.2
-- :microscope: __Lab 4:__ [OLS regression](../labs/lab04-ols-regression.pdf) (Sep-25)
-- __Assignment 2:__ [Problem Set 2](../problems/problems2.pdf) (due: Sep-21 before midnight)
+- :book: __Reading__: 
+    + ISL 3
+    + APM 6.1-6.2
 - :microscope: __Lab 4__: [OLS regression](../labs/lab04-ols-regression.pdf) (Feb-12)
-- :bomb: __HW 1__: Problem Set 1 (due: Feb-02 before midnight)
+- :bomb: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
 
 -----
 
@@ -87,3 +87,18 @@ These building blocks will allow you to better understand the alternative approa
 - :microscope: __Lab 5__: [More OLS and resampling with R](../labs/lab05-inference-regression) (Feb-20)
 
 -----
+
+## Regression: Dimension Reduction Methods
+
+- :card_index: __Dates__: Feb 19-23 _(Holiday Feb-19)_
+- :paperclip: __Topics__: Pre-processing predictors via PCA prior to performing regression is known as Principal Component Regression (PCR). Partial Least Squares Regression (PLSR) also finds linear combinations of the predictors that maximally summarize tha variation of the predictors while simultaneously requiring these components to have maximum correlation with the response. 
+- :file: __Notes__:
+    + [Principal Components Regression](../slides/16-pc-regression.pdf) (PCR)
+    + [Partial Least Squares Regression 1](../slides/17-pls-regression1.pdf) (PLSR) part 1
+    + [Partial Least Squares Regression 2](../slides/18-pls-regression2.pdf) (PLSR) part 2
+- :book: __Reading__:
+    + ISL 6.3
+    + APM 6.3
+- :microscope: __Lab 6__: [PCR and PLSR](../labs/lab06-pcr-pls-regression.pdf) (Feb-26)
+- :bomb: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
+
