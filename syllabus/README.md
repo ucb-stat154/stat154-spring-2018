@@ -35,7 +35,7 @@
     + [Singular Value Decomposition (SVD)](../slides/05-matrix-svd.pdf)
     + [Eigenvalue Decomposition (EVD)](../slides/06-matrix-eigen.pdf)
 - :microscope: __Lab 2__: [Matrix decompositions and the power algorithm](../labs/lab02-matrix-decompositions.pdf) (Jan-29)
-- :bomb: __HW 1__: Problem Set 1 (due: Feb-02 before midnight)
+- :dart: __HW 1__: Problem Set 1 (due: Feb-02 before midnight)
 
 -----
 
@@ -67,7 +67,7 @@
     + ISL 3
     + APM 6.1-6.2
 - :microscope: __Lab 4__: [OLS regression](../labs/lab04-ols-regression.pdf) (Feb-12)
-- :bomb: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
+- :dart: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
 
 -----
 
@@ -100,5 +100,5 @@ These building blocks will allow you to better understand the alternative approa
     + ISL 6.3
     + APM 6.3
 - :microscope: __Lab 6__: [PCR and PLSR](../labs/lab06-pcr-pls-regression.pdf) (Feb-26)
-- :bomb: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
+- :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
 
