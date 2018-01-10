@@ -80,7 +80,6 @@ There is no official textbook for this course although we will use the following
 - __Applied Predictive Modeling__ by Max Kuhn and Kjell Johnson. Springer, 2013.
 
 - __Data Mining and Statistics for Decision Making__ by Stephane Tuffery. Wiley 2011.
-This book should be in electronic format via the UCB Library Catalog. If the course slides are not self-explanatory enough, you can supplement them with this little known, yet excellent resource.
 
 
 
