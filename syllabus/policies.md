@@ -67,8 +67,8 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
 
 ### Tests
 
-- There will be two 50-minute in-class midterms, and one final exam.
-- The tentative date of the midterms are TBD.
+- There will be one 50-minute in-class midterm, and one final exam.
+- The tentative date of the midterm is TBD.
 - There will be __no early or makeup exams__.
 - Do not take the class if you are not available at these dates and times.
 - We will use gradescope to grade the tests.
@@ -92,10 +92,9 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
 ### Grading Structure
 
 - Labs: 10%
-- Homework: 40%
-- Midterm 1: 15%
-- Midterm 2: 15%
-- Final Exam: 20%
+- Homework: 50%
+- Midterm: 15%
+- Final Exam: 25%
 - Oral Evaluation: ?
 
 No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score.
