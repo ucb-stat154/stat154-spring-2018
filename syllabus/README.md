@@ -51,14 +51,14 @@
     + ISL 10
     + APM 3
     + [PCA](../papers/Abdi_2010_Principal_Component_Analysis.pdf) paper by Herve Abdi and Lynne Williams (2010)
-- :microscope: __Lab 3__: [PCA in R](../labs/lab03-principal-components.pdf) (Feb-05)
+- :microscope: __Lab 3__: PCA in R (Feb-05)
 
 -----
 
 ## Regression via Least Squares
 
 - :card_index: __Dates__: Feb 05-09
-- :paperclip: __Topics__: Introduction to Regression Analysis and the classic Linear Model framework. We begin with a bit of history, and then present the Least Squares minimization problem for both simple and multiple regression without any stochastic assumptions, just plain algebra, calculus and geometry. We also talk about some computational aspects about least squares.
+- :paperclip: __Topics__: Introduction to Regression Analysis and the classic Linear Model framework. We begin with the Least Squares minimization problem for both simple and multiple regression without any stochastic assumptions, just plain algebra, calculus and geometry. We also talk about some computational aspects about least squares.
 - :file_folder: __Notes__:
     + [A bit of history](../slides/10-history-regression.pdf)
     + [Simple OLS regression](../slides/11-ols-regression1.pdf)
@@ -66,16 +66,15 @@
 - :book: __Reading__: 
     + ISL 3
     + APM 6.1-6.2
-- :microscope: __Lab 4__: [OLS regression](../labs/lab04-ols-regression.pdf) (Feb-12)
+- :microscope: __Lab 4__: OLS regression (Feb-12)
 - :dart: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
 
 -----
 
-## Statistical Learning Ideas for Regression
+## Statistical Learning Aspects for Regression
 
 - :card_index:__Dates__: Feb 12-16
-- :paperclip: __Topics__: After OLS regression, we cover fundamental Statistical Learning concepts such as measures for model performance, overfitting, training and test datasets, and resampling methods.
-These building blocks will allow you to better understand the alternative approaches for linear regression. 
+- :paperclip: __Topics__: After OLS regression, we cover fundamental Statistical Learning concepts such as measures for model performance, overfitting, training and test datasets, and resampling methods. These building blocks will allow you to better understand the alternative approaches for linear regression. 
 - :file_folder: __Notes__:
     + [Inferential Aspects in OLS Regression](../slides/13-inference-regression.pdf)
     + [Model Performance, Overfitting, and Training-Test sets](../slides/14-esl-regression-ideas.pdf)
@@ -84,7 +83,7 @@ These building blocks will allow you to better understand the alternative approa
     + ISL 2 & 5
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
-- :microscope: __Lab 5__: [More OLS and resampling with R](../labs/lab05-inference-regression) (Feb-20)
+- :microscope: __Lab 5__: More OLS and resampling with R (Feb-20)
 
 -----
 
@@ -99,7 +98,7 @@ These building blocks will allow you to better understand the alternative approa
 - :book: __Reading__:
     + ISL 6.3
     + APM 6.3
-- :microscope: __Lab 6__: [PCR and PLSR](../labs/lab06-pcr-pls-regression.pdf) (Feb-26)
+- :microscope: __Lab 6__: PCR and PLSR (Feb-26)
 - :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
 
 -----
@@ -116,68 +115,122 @@ These building blocks will allow you to better understand the alternative approa
 - :book: __Reading__:
     + ISL 6.2
     + APM 6.4
-- :microscope: __Lab 7__: [RR and Lasso](../labs/lab07-ridge-lasso.pdf) (Mar-05)
+- :microscope: __Lab 7__: RR and Lasso (Mar-05)
 
 -----
 
-## Regression Overview and transition to Classification
+## Canonical Correlation Analysis (CCA)
 
 - :card_index: __Dates__: Mar 05-09
-- :paperclip: __Topics__: Overview of linear regression models with discussion of a set of continuum regression approaches. We will also transition into Classification methods with the introduction to Logistic Regression.
+- :paperclip: __Topics__: Discussion of Canonical Correlation Anlysis and its modeling framework.
 - :file_folder: __Notes__:
     + Continuum Regression Discussion (chalk and talk)
-    + [Logistic Regression (part I)](../slides/22-logistic-regression1.pdf)
-    + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
+    + Canonical Correlation Analysis (CCA)
+    + (GCCA)
 - :book: __Reading__:
     + ISL 4.1-4.3
     + APM 12.2
-- :microscope: __Lab 8__: [Logistic Regression](../labs/lab08-logistic-regression.pdf) (Mar-12)
+- :microscope: __Lab 8__: Canonical Correlation Analysis (Mar-12)
 - :dart: __HW 4:__ Problem Set 4 (due: Mar-16 before midnight)
-- :mortar_board: __MIDTERM 1__: Friday Mar-09
+
+-----
+
+## Transition to Classification Methods
+
+- :card_index: __Dates__: Mar 12-16
+- :paperclip: __Topics__: We will also transition into Classification methods with the introduction to Logistic Regression.
+- :file_folder: __Notes__:
+    + [Logistic Regression (part I)](../slides/22-logistic-regression1.pdf)
+    + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
+    + [Preamble to Discriminant Analysis](../slides/24-discriminant-preamble.pdf)
+- :book: __Reading__:
+    + ISL 4.1-4.3
+    + APM 12.2
+- :microscope: __Lab 9__: Logistic Regression (Mar-19)
+- :mortar_board: __MIDTERM 1__: Friday Mar-16
 
 -----
 
 ## Classification: Geometric Discriminant Analysis
 
-- :card_index: __Dates__: Mar 12-16
+- :card_index: __Dates__: Mar 19-23
 - :paperclip: __Topics__: The origins and foundations of Discriminant Analysis (DA) are based on Ronald Fisher's geometric approach. This can be considered as classification with an unsupervised touch.
 - :file_folder: __Notes__:
-    + [Preamble to Discriminant Analysis](../slides/24-discriminant-preamble.pdf)
     + [Geometric Discriminant Analysis (part I)](../slides/25-geometric-discriminant1.pdf)
     + [Geometric Discriminant Analysis (part II)](../slides/26-geometric-discriminant2.pdf)
 - :book: __Reading__: ISL 4.4; APM 12.3
-- :microscope: __Lab 9__: [Discriminant Analysis](../labs/lab09-lda-qda.pdf) (Mar-19)
+- :microscope: __Lab 10__: Discriminant Analysis (Apr-02)
+- :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
 
 -----
 
 ## Classification: Probabilistic Discriminant Analysis
 
-- :card_index: __Dates__: Mar 19-23
+- :card_index: __Dates__: Apr 02-06
 - :paperclip: __Topics__: Presentation of the probabilistic framework for classiciation purposes with the so-called Bayes Classifier. We move on from geometric DA to Probabilistic DA, and also discuss the non-parametric method kNN.
 - :file_folder: __Notes__:
     + [Classification](../slides/27-classification.pdf) (slides by Hastie and Tibshirani)
         + Bayes Classifier
         + Linear and Quadratic Discriminant Analysis
         + K-Nearest Neighbors (kNN)
+    + Discriminant Analysis Synthesis (chalk and talk)
 - :book: __Reading__:
     + ISL 4.4
     + APM 13.5
-- :microscope: __Lab 10__: [Comparing Classification Methods](../labs/lab10-knn.pdf) (Apr-02)
-- :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
+- :microscope: __Lab 11__: Comparing Classification Methods (Apr-09)
 
 -----
 
-## Classification: Statistical Learning Concepts
+## Clustering
 
-- :card_index: __Dates__: Apr 02-06
-- :paperclip: __Topics__: Summary of classifications methods, and introduction to decision trees.
+- :card_index: __Dates__: Apr 09-13
+- :paperclip: __Topics__: Finding groups in data with Clustering. This is the second unpervised
+learning tool of the course, covering partition methods as well as hierarchical 
+agglomerative techniques.
 - :file_folder: __Notes__:
-    + Discriminant Analysis Synthesis (chalk and talk)
+    + K-means clustering
+    + Hierarchical Clustering
+- :book: __Reading__:
+    + ISL 10
+- :microscope: __Lab 12__: Clustering (Apr-16)
+- :dart: __HW 6:__ Problem Set 6 (due: Apr-20 before midnight)
+
+-----
+
+## Tree-based Methods
+
+- :card_index: __Dates__: Apr 16-20
+- :paperclip: __Topics__: Summary of classifications methods, and introduction to decision trees as well as Tree-based methods.
+- :file_folder: __Notes__:
     + [Classification Performance Measures](../apps/roc-curve/roc-curve-apm.md)
     + [Introduction to Decision Trees](../slides/28-trees-introduction.pdf)
+    + [More about decision trees](../slides/29-decision-trees.pdf)
 - :book: __Reading__:
     + ISL 4
     + APM 11
-- :microscope: __Lab 11__: [ROC Curve and SVM](../labs/lab11-svm.pdf) (Apr-09)
+- :microscope: __Lab 13__: TBA (Apr-23)
 
 -----
+
+## Tree-based Methods
+
+- :card_index: __Dates__: Apr 23-27
+- :paperclip: __Topics__: More about tree-based methods.
+- :file_folder: __Notes__:
+    + [Intro to `rpart`](../papers/Intro-to-rpart.md)
+    + [Tree-based methods](../slides/30-tree-based-methods.pdf) (slides by Hastie and Tibshirani)
+        + Bagging
+        + Random Forest
+- :book: __Reading__:
+    + ISL 8
+    + APM 8
+
+-----
+
+## RRR Week
+
+- :card_index: __Dates__: Apr 30-May 04
+- :paperclip: __Topics__: No instruction.
+- :mortar_board: __FINAL__: TBA
+
+
