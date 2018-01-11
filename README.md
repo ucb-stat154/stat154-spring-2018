@@ -9,7 +9,7 @@ __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Ber
 - __Session Dates:__ 01/17/18 - 05/04/18
 - __Code #:__ 30887
 - __Units:__ 4 (more info [here](http://classes.berkeley.edu/content/2018-spring-stat-154-001-lec-001))
-- __Office Hours:__ MWF 3:00-4:00pm in 309 Evans (or by appointment)
+- __Office Hours:__ MW 3:00-4:00pm in 309 Evans (or by appointment)
 - __Final:__ TBA
 - __GSI:__ Omid Solari (OH TBD). 
 
