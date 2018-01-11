@@ -23,18 +23,7 @@ __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Ber
 
 ### Description
 
-This is an introductory-level course in supervised learning, with a focus on regression and classification methods. The [syllabus](syllabus) includes: linear regression, model assessment, model selection, regularization methods (pcr, plsr, ridge and lasso); logistic regression and  discriminant analysis; cross-validation and the bootstrap; tree-based methods, random forests and boosting; support-vector machines. Some unsupervised learning methods are discussed: principal components and clustering (k-means and hierarchical).
-
-In this course, we will explore the predictive modeling lifecycle, including question formulation, data preprocessing, exploratory data analysis and visualization, model building, model assessment/validation, model selection, and decision-making.​ 
-
-We will focus on quantitative critical thinking​ and key principles needed to carry out this cycle. 1) Foundational principles for building predictive models; 2) Intuitive explanations of many commonly used predictive modeling techniques for both classification and regression problems; 3) Principles and steps for validating a predictive model; and 4) write and use computer code to perform the necessary foundational work to build and validate predictive models.
-
-
-
-### Contents
-
-The course focuses on predictive models, and it covers the following 
-topics (not necessarily in the displayed order):
+This is an introductory-level course in statistical learning, with an emphasis on regression and classification methods, and a pinch of unsupervised methods. The course includes the following topics (not necessarily in the displayed order, see [syllabus](syllabus) for more info):
 
 - Process of predictive model building
 - Data Preprocessing
@@ -51,6 +40,8 @@ topics (not necessarily in the displayed order):
 - Data spending: splitting and resampling methods
 - Model Evaluation
 - Model Selection
+
+Throughout the semester we will explore the predictive modeling lifecycle, including question formulation, data preprocessing, exploratory data analysis and visualization, model building, model assessment/validation, model selection, and decision-making.​ 
 
 
 
