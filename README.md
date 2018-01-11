@@ -4,7 +4,7 @@ This repository holds the course materials for the Spring 2018 edition of
 __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Berkeley.
 
 
-- __Instructor:__ [Gaston Sanchez](http://gastonsanchez.com),  gasigiri [at] berkeley.edu
+- __Instructor:__ [Gaston Sanchez](http://gastonsanchez.com),  gasigiri [at] berkeley [dot] edu
 - __Class Time:__ MWF 11-12pm in [180 Tan](http://www.berkeley.edu/map?tan)
 - __Session Dates:__ 01/17/18 - 05/04/18
 - __Code #:__ 30887
