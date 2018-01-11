@@ -4,7 +4,7 @@ This repository holds the course materials for the Spring 2018 edition of
 __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Berkeley.
 
 
-- __Instructor:__ [Gaston Sanchez](http://gastonsanchez.com),  gasigiri [at] gmail.com
+- __Instructor:__ [Gaston Sanchez](http://gastonsanchez.com),  gasigiri [at] berkeley.edu
 - __Class Time:__ MWF 11-12pm in [180 Tan](http://www.berkeley.edu/map?tan)
 - __Session Dates:__ 01/17/18 - 05/04/18
 - __Code #:__ 30887
@@ -75,7 +75,7 @@ There is no official textbook for this course although we will use the following
 
 - __An Introduction to Statistical Learning__ (ISL) by James, Witten, Hastie, and Tibshirani. Springer, 2013. It is freely available online in pdf format (courtesy of the authors) at [http://www-bcf.usc.edu/~gareth/ISL/](http://www-bcf.usc.edu/~gareth/ISL/).
 
-- __The Elements of Statistical Learning__ by Hastie, Tibshirani and Friedman. Springer, 2009 (2nd Ed). This book is more mathematically-and-conceptually advanced than ISL. It is freely available online in pdf format (courtesy of the authors) at [https://statweb.stanford.edu/~tibs/ElemStatLearn/](https://statweb.stanford.edu/~tibs/ElemStatLearn/). This text will not be used directly for this course and is simply a reference for more theoretical details.
+- __The Elements of Statistical Learning__ by Hastie, Tibshirani and Friedman. Springer, 2009 (2nd Ed). This book is more mathematically-and-conceptually advanced than ISL. It is freely available online in pdf format (courtesy of the authors) at [https://statweb.stanford.edu/~tibs/ElemStatLearn/](https://statweb.stanford.edu/~tibs/ElemStatLearn/).
 
 - __Applied Predictive Modeling__ by Max Kuhn and Kjell Johnson. Springer, 2013.
 
