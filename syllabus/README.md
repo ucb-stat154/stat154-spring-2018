@@ -83,7 +83,7 @@
     + ISL 2 & 5
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
-- :microscope: __Lab 5__: More OLS and resampling with R (Feb-20)
+- :microscope: __Lab 5__: More OLS and resampling with R (Feb-19, self-guided lab)
 
 -----
 
@@ -138,7 +138,7 @@
 ## Transition to Classification Methods
 
 - :card_index: __Dates__: Mar 12-16
-- :paperclip: __Topics__: We will also transition into Classification methods with the introduction to Logistic Regression.
+- :paperclip: __Topics__: Transition into Classification methods with the introduction to Logistic Regression, and preliminary concepts for discriminant analysis.
 - :file_folder: __Notes__:
     + [Logistic Regression (part I)](../slides/22-logistic-regression1.pdf)
     + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
