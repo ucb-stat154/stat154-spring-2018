@@ -3,6 +3,7 @@
 - [Labs](#labs)
 - [Assignments](#assignments)
 - [Assignments Grading](#assignments-grading)
+- [Piazza](#piazza)
 - [Tests](#tests)
 - [Oral Evaluation](#oral-evaluation)
 - [Grading Structure](#grading-structure)
@@ -65,11 +66,24 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
 
 
 
+### Piazza
+
+- We will use Piazza as a Q&A forum (and for some official announcements).
+- If you have questions about anything related to the course, please post them on Piazza rather than emailing the instructor or GSIs.
+- Please do not post anything resembling a solution to a homework problem before it's due. If in doubt, you should make your post private (visible to instructors only).
+- See the [Piazza Etiquette](piazza.md) section for more on using Piazza. 
+
+
+
 ### Tests
 
 - There will be one 50-minute in-class midterm, and one final exam.
 - The tentative date of the midterm is TBD.
-- There will be __no early or makeup exams__.
+- The midterm exam will be held in class (during lecture period). Tentative date on Friday, March 9. 
+- The final exam will be held from 7 p.m. to 10 p.m. on Tuesday May 8, as scheduled by the university, in a room to be announced.
+- If you do not take the final, you will NOT pass the class.
+- Unless you have accommodations as determined by the university, you must take the midterm and the final at the dates and times provided here.
+- Please check your course schedule and make sure that you have no conflicts with these exams.There will be __no early or makeup exams__. 
 - Do not take the class if you are not available at these dates and times.
 - We will use gradescope to grade the tests.
 - You will have three full days after grades are published on gradescope to request a regrade for the midterm. The final test is NOT eligible for regrades.
