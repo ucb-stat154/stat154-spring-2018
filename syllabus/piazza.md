@@ -61,7 +61,7 @@ Please do not post questions of the form:
 
 - "Is this the correct solution to HW X problem Y?"
 - "Would this receive full credit on HW X problem Y?"
-- "Is this the right level of detail for hw X problem Y?"
+- "Is this the right level of detail for HW X problem Y?"
 
 Please do not use Piazza as a medium to ask instructors to check your 
 homework in advance. We simply cannot check every student's homework 
@@ -75,7 +75,7 @@ answers with confidence.
 
 ### 6. Post a screen shot of any resource referenced.
 
-Your question should be self-contained. The TAs (and other responders) 
+Your question should be self-contained. The GSIs (and other responders) 
 should not have to scan through PDFs to even figure out what the question is. 
 Ask yourself: am I referring to some lecture /HW solution/discussion solution/past exam?
 
