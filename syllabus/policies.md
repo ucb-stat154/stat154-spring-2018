@@ -107,8 +107,8 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
 
 - Labs: 10%
 - Homework: 50%
-- Midterm: 15%
-- Final Exam: 25%
+- Midterm: 10%
+- Final Exam: 30%
 - Oral Evaluation: ?
 
 No individual letter grades will be given for midterm, or final. You will get a letter grade for the course that is based on your overall score.
