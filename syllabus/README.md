@@ -231,6 +231,6 @@ agglomerative techniques.
 
 - :card_index: __Dates__: Apr 30-May 04
 - :paperclip: __Topics__: No instruction.
-- :mortar_board: __FINAL__: TBA
+- :mortar_board: __FINAL__: Tue May 8, 7-10pm (room TBA)
 
 
