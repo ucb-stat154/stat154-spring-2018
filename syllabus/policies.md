@@ -22,11 +22,11 @@
 - Lab discussion is a required part of the class and is meant to supplement lecture.
 - You must attend the discussion group you are officially registered in.
 - You will be encouraged to problem solve individually or in groups.
-- To receive full credit, you must attend the lab, complete the lab assignment, and submit the lab assignment on bcourses.
-- Failure to attend the lab without prior arrangement results in a score of zero for the lab assignment.
+- Your lab score will be based on attedance (50%) and submission (50%).
+- To receive full credit, you must attend the lab (50%), complete the lab assignment, and submit the lab assignment on bcourses (50%).
 - If you didn't finish the assignment during the lab session, you can still get full credit by submitting a completed assignment on bcourses before Friday 11:59pm of the same week as the lab session.
 - Each person must submit each lab independently, but you are welcome to collaborate with other students in your lab room.
-- There will be about 4/5 short quizzes given in discussion to test your understanding.
+- There may be some short quizzes given in discussion to test your understanding.
 - Your quiz scores __will NOT__ be part of your grade.
 
 
