@@ -58,7 +58,7 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
     + __8__ = Mostly right but a minor thing missing or wrong,
     + __10__ = 100% correct.
 
-- Note: You must justify every self-grade score with a comment. If you are really confused about how to grade a particular problem, you should post on [Piazza](https://piazza.com/class/j6nzkfrb2p724n). This is not supposed to be a stressful process.
+- Note: You must justify every self-grade score with a comment. If you are really confused about how to grade a particular problem, you should post on [Piazza](https://piazza.com/class/jc9h3iwt5m42zz). This is not supposed to be a stressful process.
 - Your self-grades will be due three days after the homework deadline at 11:59 PM sharp.
 - We will accept late self-grades up to a week after the original homework deadline for half credit on the associated homework assignment.
 - If you don't enter a proper grade by this deadline, you are giving yourself a zero on that assignment.
