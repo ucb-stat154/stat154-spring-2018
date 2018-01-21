@@ -32,8 +32,8 @@
 - :card_index: __Dates__: Jan 22-26
 - :paperclip: __Topics__: Description of the data matrix, its rows-and-columns duality, and various types of cross-products. Review of matrix Decompositions with R, talking about the functions `svd()` and `eigen()`, the implications of the decompositions, data reduction, and visual displays.
 - :file_folder: __Notes__:
-    + [Singular Value Decomposition (SVD)](../slides/05-matrix-svd.pdf)
-    + [Eigenvalue Decomposition (EVD)](../slides/06-matrix-eigen.pdf)
+    + [Eigenvalue Decomposition (EVD)](../slides/05-matrix-eigen.pdf)
+    + [Singular Value Decomposition (SVD)](../slides/06-matrix-svd.pdf)
 - :microscope: __Lab 2__: Matrix decompositions and the power algorithm (Jan-29)
 - :dart: __HW 1__: [Problem Set 1](../hws/problems1.pdf) (due: Feb-02 before midnight)
 
