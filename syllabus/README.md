@@ -23,7 +23,7 @@
     + [Matrices in R](../slides/02-matrix-in-R.pdf)
     + [Statistical operations with vector-matrix notation](../slides/03-matrix-stat-operations1.pdf)
     + [The duality of the data matrix](../slides/04-matrix-stat-operations2.pdf), and common cross-products X'X and XX'
-- :microscope: __Lab 1__: [Warm-up with matrices in R](../labs/lab01-matrix-practice.pdf) (Jan-22)
+- :microscope: __Lab 1__: [Warm-up with matrices in R](../labs/lab01-matrix-practice.pdf) (Jan-22, due Jan-26)
 
 -----
 
@@ -34,7 +34,7 @@
 - :file_folder: __Notes__:
     + [Eigenvalue Decomposition (EVD)](../slides/05-matrix-eigen.pdf)
     + [Singular Value Decomposition (SVD)](../slides/06-matrix-svd.pdf)
-- :microscope: __Lab 2__: Matrix decompositions and the power algorithm (Jan-29)
+- :microscope: __Lab 2__: Matrix decompositions and the power algorithm (Jan-29, due Feb-02)
 - :dart: __HW 1__: [Problem Set 1](../problems/problems1.pdf) (due: Feb-02 before midnight)
 
 -----
@@ -51,7 +51,7 @@
     + ISL 10
     + APM 3
     + [PCA](../papers/Abdi_2010_Principal_Component_Analysis.pdf) paper by Herve Abdi and Lynne Williams (2010)
-- :microscope: __Lab 3__: PCA in R (Feb-05)
+- :microscope: __Lab 3__: PCA in R (Feb-05, due Feb-09)
 
 -----
 
@@ -66,7 +66,7 @@
 - :book: __Reading__: 
     + ISL 3
     + APM 6.1-6.2
-- :microscope: __Lab 4__: OLS regression (Feb-12)
+- :microscope: __Lab 4__: OLS regression (Feb-12, due Feb-16)
 - :dart: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
 
 -----
@@ -83,7 +83,7 @@
     + ISL 2 & 5
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
-- :microscope: __Lab 5__: More OLS and resampling with R (Feb-19, self-guided lab)
+- :microscope: __Lab 5__: More OLS and resampling with R (Feb-19, self-guided lab, due Feb-23)
 
 -----
 
@@ -98,7 +98,7 @@
 - :book: __Reading__:
     + ISL 6.3
     + APM 6.3
-- :microscope: __Lab 6__: PCR and PLSR (Feb-26)
+- :microscope: __Lab 6__: PCR and PLSR (Feb-26, due Mar-02)
 - :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
 
 -----
@@ -115,7 +115,7 @@
 - :book: __Reading__:
     + ISL 6.2
     + APM 6.4
-- :microscope: __Lab 7__: RR and Lasso (Mar-05)
+- :microscope: __Lab 7__: RR and Lasso (Mar-05, due Mar-09)
 
 -----
 
@@ -130,7 +130,7 @@
 - :book: __Reading__:
     + ISL 4.1-4.3
     + APM 12.2
-- :microscope: __Lab 8__: Canonical Correlation Analysis (Mar-12)
+- :microscope: __Lab 8__: Canonical Correlation Analysis (Mar-12, due Mar-16)
 - :dart: __HW 4:__ Problem Set 4 (due: Mar-16 before midnight)
 
 -----
@@ -146,7 +146,7 @@
 - :book: __Reading__:
     + ISL 4.1-4.3
     + APM 12.2
-- :microscope: __Lab 9__: Logistic Regression (Mar-19)
+- :microscope: __Lab 9__: Logistic Regression (Mar-19, due Mar-23)
 - :mortar_board: __MIDTERM 1__: Friday Mar-16
 
 -----
