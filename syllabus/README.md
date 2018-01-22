@@ -4,6 +4,7 @@
 	- Tentative calendar (weekly topics), subject to changes depending on the pace of the course.
 	- Labs: For the covered topics in a given week, the associated lab takes place on Monday of the following week.
 	- ISL = _An Introduction to Statistical Learning_ (by James et al, 2015)
+    - ESL = _The Elements of Statistical Learning_ (by Hastie et al, 2009)
 	- APM = _Applied Predictive Modeling_ (by Kuhn and Johnson, 2013)
 
 -----
@@ -16,7 +17,7 @@
     + [About the course](../slides/00-course-info.pdf)
     + [Introduction](../slides/01-introduction.pdf)
 - :book: __Reading__: 
-    + ISL 1 & 2
+    + ISL 1 & 2; ESL 1 & 2.1-2.3
     + APM 1
     + [Statistical Modeling: The Two Cultures](../papers/Breiman_2001_Statistical_Modeling_Two_Cultures.pdf) by Leo Breiman (2001)
 - :mag: __Review__: Go over the following set of notes
@@ -48,7 +49,7 @@
     + [Painstaking PCA](../slides/08-principal-components2.pdf)
     + [More about PCA](../slides/09-principal-components3.pdf) (properties and derived results)
 - :book: __Reading__: 
-    + ISL 10
+    + ISL 10; ESL 14.5
     + APM 3
     + [PCA](../papers/Abdi_2010_Principal_Component_Analysis.pdf) paper by Herve Abdi and Lynne Williams (2010)
 - :microscope: __Lab 3__: PCA in R (Feb-05, due Feb-09)
@@ -64,7 +65,7 @@
     + [Simple OLS regression](../slides/11-ols-regression1.pdf)
     + [Multiple OLS regression](../slides/12-ols-regression2.pdf)
 - :book: __Reading__: 
-    + ISL 3
+    + ISL 3; ESL 3.1-3.2
     + APM 6.1-6.2
 - :microscope: __Lab 4__: OLS regression (Feb-12, due Feb-16)
 - :dart: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
@@ -80,7 +81,7 @@
     + [Model Performance, Overfitting, and Training-Test sets](../slides/14-esl-regression-ideas.pdf)
     + [Multicollinearity issues](../slides/15-multicollinearity-issues.pdf)
 - :book: __Reading__:
-    + ISL 2 & 5
+    + ISL 2 & 5; ESL 2.4 & 2.6
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
 - :microscope: __Lab 5__: More OLS and resampling with R (Feb-19, self-guided lab, due Feb-23)
@@ -96,7 +97,7 @@
     + [Partial Least Squares Regression 1](../slides/17-pls-regression1.pdf) (PLSR) part 1
     + [Partial Least Squares Regression 2](../slides/18-pls-regression2.pdf) (PLSR) part 2
 - :book: __Reading__:
-    + ISL 6.3
+    + ISL 6.3; ESL 3.5
     + APM 6.3
 - :microscope: __Lab 6__: PCR and PLSR (Feb-26, due Mar-02)
 - :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
@@ -113,7 +114,7 @@
         + Variable Selection
         + Least Absolute Shrinkage and Selection Operator (Lasso)
 - :book: __Reading__:
-    + ISL 6.2
+    + ISL 6.2; ESL 3.4
     + APM 6.4
 - :microscope: __Lab 7__: RR and Lasso (Mar-05, due Mar-09)
 
@@ -144,7 +145,7 @@
     + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
     + [Preamble to Discriminant Analysis](../slides/24-discriminant-preamble.pdf)
 - :book: __Reading__:
-    + ISL 4.1-4.3
+    + ISL 4.1-4.3; ESL 4.1 & 4.4
     + APM 12.2
 - :microscope: __Lab 9__: Logistic Regression (Mar-19, due Mar-23)
 - :mortar_board: __MIDTERM 1__: Friday Mar-16
@@ -158,7 +159,9 @@
 - :file_folder: __Notes__:
     + [Geometric Discriminant Analysis (part I)](../slides/25-geometric-discriminant1.pdf)
     + [Geometric Discriminant Analysis (part II)](../slides/26-geometric-discriminant2.pdf)
-- :book: __Reading__: ISL 4.4; APM 12.3
+- :book: __Reading__:
+    + ISL 4.4; ESL 4.2-4.3 
+    + APM 12.3
 - :microscope: __Lab 10__: Discriminant Analysis (Apr-02)
 - :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
 
@@ -175,7 +178,7 @@
         + K-Nearest Neighbors (kNN)
     + Discriminant Analysis Synthesis (chalk and talk)
 - :book: __Reading__:
-    + ISL 4.4
+    + ISL 4.4; ESL 4.3
     + APM 13.5
 - :microscope: __Lab 11__: Comparing Classification Methods (Apr-09)
 
@@ -191,7 +194,7 @@ agglomerative techniques.
     + K-means clustering
     + Hierarchical Clustering
 - :book: __Reading__:
-    + ISL 10
+    + ISL 10; ESL 14.3
 - :microscope: __Lab 12__: Clustering (Apr-16)
 - :dart: __HW 6:__ Problem Set 6 (due: Apr-20 before midnight)
 
@@ -206,7 +209,7 @@ agglomerative techniques.
     + [Introduction to Decision Trees](../slides/28-trees-introduction.pdf)
     + [More about decision trees](../slides/29-decision-trees.pdf)
 - :book: __Reading__:
-    + ISL 4
+    + ISL 4; ESL 9.2
     + APM 11
 - :microscope: __Lab 13__: TBA (Apr-23)
 
@@ -222,7 +225,7 @@ agglomerative techniques.
         + Bagging
         + Random Forest
 - :book: __Reading__:
-    + ISL 8
+    + ISL 8; ESL 10
     + APM 8
 
 -----
