@@ -69,6 +69,7 @@ All assignments (Problem Sets) will involve writing a combination of code, actua
 ### Piazza
 
 - We will use Piazza as a Q&A forum (and for some official announcements).
+- To join piazza follow this link [piazza.com/berkeley/spring2018/stat154](piazza.com/berkeley/spring2018/stat154)
 - If you have questions about anything related to the course, please post them on Piazza rather than emailing the instructor or GSIs.
 - Please do not post anything resembling a solution to a homework problem before it's due. If in doubt, you should make your post private (visible to instructors only).
 - See the [Piazza Etiquette](piazza.md) section for more on using Piazza. 
