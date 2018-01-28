@@ -35,7 +35,7 @@
 - :file_folder: __Notes__:
     + [Eigenvalue Decomposition (EVD)](../slides/05-matrix-eigen.pdf)
     + [Singular Value Decomposition (SVD)](../slides/06-matrix-svd.pdf)
-- :microscope: __Lab 2__: Matrix decompositions and the power algorithm (Jan-29, due Feb-02)
+- :microscope: __Lab 2__: [Matrix decompositions and the power algorithm](../labs/lab02-matrix-decompositions.pdf) (Jan-29, due Feb-02)
 - :dart: __HW 1__: [Problem Set 1](../problems/problems1.pdf) (due: Feb-02 before midnight)
 
 -----
