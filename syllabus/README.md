@@ -68,7 +68,7 @@
     + ISL 3; ESL 3.1-3.2
     + APM 6.1-6.2
 - :microscope: __Lab 4__: OLS regression (Feb-12, due Feb-16)
-- :dart: __HW 2__: Problem Set 2 (due: Feb-16 before midnight)
+- :dart: __HW 2__: [Problem Set 2](../problems/problems2.pdf) (due: Feb-16 before midnight)
 
 -----
 
