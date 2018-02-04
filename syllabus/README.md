@@ -52,7 +52,7 @@
     + ISL 10; ESL 14.5
     + APM 3
     + [PCA](../papers/Abdi_2010_Principal_Component_Analysis.pdf) paper by Herve Abdi and Lynne Williams (2010)
-- :microscope: __Lab 3__: PCA in R (Feb-05, due Feb-09)
+- :microscope: __Lab 3__: [PCA in R](../labs/lab03-principal-components.pdf) (Feb-05, due Feb-09)
 
 -----
 
@@ -61,7 +61,7 @@
 - :card_index: __Dates__: Feb 05-09
 - :paperclip: __Topics__: Introduction to Regression Analysis and the classic Linear Model framework. We begin with the Least Squares minimization problem for both simple and multiple regression without any stochastic assumptions, just plain algebra, calculus and geometry. We also talk about some computational aspects about least squares.
 - :file_folder: __Notes__:
-    + [A bit of history](../slides/10-history-regression.pdf)
+    + [Regression Preamble](../slides/10-regression-preamble.pdf)
     + [Simple OLS regression](../slides/11-ols-regression1.pdf)
     + [Multiple OLS regression](../slides/12-ols-regression2.pdf)
 - :book: __Reading__: 
