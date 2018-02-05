@@ -12,7 +12,7 @@ __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Ber
 - __Office Hours:__ MW 2:15-3:15pm in 309 Evans (or by appointment)
 - __Piazza:__ [piazza.com/berkeley/spring2018/stat154](piazza.com/berkeley/spring2018/stat154)
 - __Final:__ Tue May 8, 7-10pm (room TBD)
-- __GSI:__ [Omid Solari](https://osolari.github.io/#about) (OH TBD). 
+- __GSI:__ [Omid Solari](https://osolari.github.io/#about) (Mon. 5-6pm, Wed. 8-10am @444 EVANS). 
 
 
 | Lab | Date      | Room         | GSI             |
