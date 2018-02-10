@@ -29,7 +29,7 @@ ui <- fluidPage(
      checkboxInput('line_avgs', label = strong('Line of Averages')),
      sliderInput("breaks", 
                  label = "Graph of Averages",
-                 min = 2, max = 30, value = 0, step = 1),
+                 min = 0, max = 30, value = 0, step = 1),
      hr(),
      helpText('Correlation:'),
      verbatimTextOutput("correlation")
