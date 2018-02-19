@@ -64,6 +64,7 @@
     + [Regression Preamble](../slides/10-regression-preamble.pdf)
     + [Simple OLS regression](../slides/11-ols-regression1.pdf)
     + [Multiple OLS regression](../slides/12-ols-regression2.pdf)
+    + [Inferential Aspects in OLS Regression](../slides/13-inference-regression.pdf)
 - :book: __Reading__: 
     + ISL 3; ESL 3.1-3.2
     + APM 6.1-6.2
@@ -77,14 +78,14 @@
 - :card_index:__Dates__: Feb 12-16
 - :paperclip: __Topics__: After OLS regression, we cover fundamental Statistical Learning concepts such as measures for model performance, overfitting, training and test datasets, and resampling methods. These building blocks will allow you to better understand the alternative approaches for linear regression. 
 - :file_folder: __Notes__:
-    + [Inferential Aspects in OLS Regression](../slides/13-inference-regression.pdf)
-    + [Model Performance, Overfitting, and Training-Test sets](../slides/14-esl-regression-ideas.pdf)
-    + [Multicollinearity issues](../slides/15-multicollinearity-issues.pdf)
+    + [Prediction and/or Understanding](../slides/14-prediction-understanding.pdf)
+    + [Model Assessment](../slides/15-model-assessment.pdf)
+    + [Bias-Variance Trade-off](../slides/16-bias-variance.pdf)
 - :book: __Reading__:
     + ISL 2 & 5; ESL 2.4 & 2.6
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
-- :microscope: __Lab 5__: More OLS and resampling with R (Feb-19, self-guided lab, due Feb-23)
+- :microscope: __Lab 5__: _No lab (holiday Feb-19)._
 
 -----
 
@@ -93,9 +94,10 @@
 - :card_index: __Dates__: Feb 19-23 _(Holiday Feb-19)_
 - :paperclip: __Topics__: Pre-processing predictors via PCA prior to performing regression is known as Principal Component Regression (PCR). Partial Least Squares Regression (PLSR) also finds linear combinations of the predictors that maximally summarize tha variation of the predictors while simultaneously requiring these components to have maximum correlation with the response. 
 - :file_folder: __Notes__:
-    + [Principal Components Regression](../slides/16-pc-regression.pdf) (PCR)
-    + [Partial Least Squares Regression 1](../slides/17-pls-regression1.pdf) (PLSR) part 1
-    + [Partial Least Squares Regression 2](../slides/18-pls-regression2.pdf) (PLSR) part 2
+    + [Multicollinearity issues](../slides/17-multicollinearity-issues.pdf)
+    + [Principal Components Regression](../slides/18-pc-regression.pdf) (PCR)
+    + [Partial Least Squares Regression 1](../slides/19-pls-regression1.pdf) (PLSR) part 1
+    + [Partial Least Squares Regression 2](../slides/20-pls-regression2.pdf) (PLSR) part 2
 - :book: __Reading__:
     + ISL 6.3; ESL 3.5
     + APM 6.3
