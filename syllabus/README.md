@@ -76,7 +76,7 @@
 ## Statistical Learning Aspects for Regression
 
 - :card_index:__Dates__: Feb 12-16
-- :paperclip: __Topics__: After OLS regression, we cover fundamental Statistical Learning concepts such as measures for model performance, overfitting, training and test datasets, and resampling methods. These building blocks will allow you to better understand the alternative approaches for linear regression. 
+- :paperclip: __Topics__: After OLS regression, we cover fundamental Statistical Learning concepts such as measures for model performance, training and test datasets, resampling methods, overfitting, and the famous bias-variance tradeoff. These concepts form part of the theoretical framework for supervised learning. 
 - :file_folder: __Notes__:
     + [Prediction and/or Understanding](../slides/14-prediction-understanding.pdf)
     + [Model Assessment](../slides/15-model-assessment.pdf)
@@ -85,7 +85,7 @@
     + ISL 2 & 5; ESL 2.4 & 2.6
     + APM 4
     + [Models for understanding vs models for prediction](../papers/Saporta_2008_Models_for_Understanding_vs_Models_for_Prediction.pdf) by Gilbert Saporta (2008)
-- :microscope: __Lab 5__: _No lab (holiday Feb-19)._
+- :microscope: __Lab 5__: _No lab (holiday Feb-19)._ Instead read [Fitting linear models with `lm()`](../papers/lm-functions.pdf)
 
 -----
 
