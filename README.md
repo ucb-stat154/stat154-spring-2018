@@ -39,7 +39,8 @@ This is an introductory-level course in statistical learning, with an emphasis o
     + Support Vector Machines (time permitting)
 - Unsupervised methods like PCA and Clustering
 - Data spending: splitting and resampling methods
-- Model Evaluation
+- Bias-Variance Trade-off
+- Model Assessment
 - Model Selection
 
 Throughout the semester we will explore the predictive modeling lifecycle, including question formulation, data preprocessing, exploratory data analysis and visualization, model building, model assessment/validation, model selection, and decision-making.​ 
