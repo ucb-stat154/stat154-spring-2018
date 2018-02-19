@@ -102,7 +102,7 @@
     + ISL 6.3; ESL 3.5
     + APM 6.3
 - :microscope: __Lab 6__: PCR and PLSR (Feb-26, due Mar-02)
-- :dart: __HW 3__: Problem Set 3 (due: Mar-02 before midnight)
+- :dart: __HW 3__: [Problem Set 3](../problems/problems3.pdf) (due: Mar-02 before midnight)
 
 -----
 
