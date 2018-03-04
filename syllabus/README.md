@@ -111,8 +111,8 @@
 - :card_index: __Dates__: Feb 26-Mar 02
 - :paperclip: __Topics__: One method of creating biased regression models is to add a penalty to the sum of squared residuals. This is done to control the magnitude of the parameters. By sacrificing some bias, we can often reduce the variance enough to make the overall MSE lower than unbiased models. 
 - :file_folder: __Notes__:
-    + [Ridge Regression](../slides/19-ridge-regression.pdf) (RR)
-    + [Regularization](../slides/20-regularization.pdf) (slides by Hastie and Tibshirani)
+    + [Ridge Regression](../slides/21-ridge-regression.pdf) (RR)
+    + [Regularization](../slides/22-regularization.pdf) (slides by Hastie and Tibshirani)
         + Variable Selection
         + Least Absolute Shrinkage and Selection Operator (Lasso)
 - :book: __Reading__:
@@ -134,7 +134,7 @@
     + ISL 4.1-4.3
     + APM 12.2
 - :microscope: __Lab 8__: Canonical Correlation Analysis (Mar-12, due Mar-16)
-- :dart: __HW 4:__ Problem Set 4 (due: Mar-16 before midnight)
+- :dart: __HW 4:__ [Problem Set 4](../problems/problems4.pdf) (due: Mar-16 before midnight)
 
 -----
 
