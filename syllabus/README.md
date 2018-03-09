@@ -128,8 +128,7 @@
 - :paperclip: __Topics__: Discussion of Canonical Correlation Anlysis and its modeling framework.
 - :file_folder: __Notes__:
     + Continuum Regression Discussion (chalk and talk)
-    + Canonical Correlation Analysis (CCA)
-    + (GCCA)
+    + Canonical Correlation Analysis "CCA" (chalk and talk)
 - :book: __Reading__:
     + ISL 4.1-4.3
     + APM 12.2
@@ -143,9 +142,9 @@
 - :card_index: __Dates__: Mar 12-16
 - :paperclip: __Topics__: Transition into Classification methods with the introduction to Logistic Regression, and preliminary concepts for discriminant analysis.
 - :file_folder: __Notes__:
-    + [Logistic Regression (part I)](../slides/22-logistic-regression1.pdf)
-    + [Logistic Regression (part II)](../slides/23-logistic-regression2.pdf)
-    + [Preamble to Discriminant Analysis](../slides/24-discriminant-preamble.pdf)
+    + [Logistic Regression (part I)](../slides/24-logistic-regression1.pdf)
+    + [Logistic Regression (part II)](../slides/25-logistic-regression2.pdf)
+    + [Preamble to Discriminant Analysis](../slides/26-discriminant-preamble.pdf)
 - :book: __Reading__:
     + ISL 4.1-4.3; ESL 4.1 & 4.4
     + APM 12.2
