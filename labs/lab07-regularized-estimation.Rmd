@@ -125,15 +125,15 @@ Evaluate MSE on test set using all 10 models. Which one is the best?
 
 ## Example 2
 
-True model: $\textbf{y}=\textbf{X\beta} + \textbf{\epsilon}$
+True model: $\mathbf{y}=\mathbf{X\beta} + \mathbf{\epsilon}$
 
 where:
 
-- $\textbf{\beta}=(\underbrace{1,...,1}_{1500}, \underbrace{0,...,0}_{3500})^T$
+- $\mathbf{\beta}=(\underbrace{1,...,1}_{1500}, \underbrace{0,...,0}_{3500})^T$
 - $p=5000 > n=1000$
 - Uncorrelated predictors: 
-    + $\textbf{X}_i \overset{\text{iid}}{\sim} N(\textbf{0}, \textbf{I})$
-- $\bs{\epsilon} \overset{\text{iid}}{\sim} N(\textbf{0},\textbf{I})$
+    + $\mathbf{X}_i \overset{\text{iid}}{\sim} N(\mathbf{0}, \mathbf{I})$
+- $\mathbf{\epsilon} \overset{\text{iid}}{\sim} N(\mathbf{0},\mathbf{I})$
 
 ### Generate Data
 
@@ -160,14 +160,14 @@ Now your turn,
 Evaluate MSE on test set using all 10 models. Which one is the best?
 
 ## Example 3
-True model: $y =\textbf{X\beta} + \epsilon$ 
+True model: $y =\mathbf{X\beta} + \epsilon$ 
 
 where 
 
-- $\textbf{\beta}=(10,10,5,5,\underbrace{1,...,1}_{10},\underbrace{0,...,0}_{36})^T$
+- $\mathbf{\beta}=(10,10,5,5,\underbrace{1,...,1}_{10},\underbrace{0,...,0}_{36})^T$
 - $p=50$
 - $n=100$
-- Correlated predictors: $Cov(\textbf{X})_{ij} = (0.7)^{|i-j|}$
+- Correlated predictors: $Cov(\mathbf{X})_{ij} = (0.7)^{|i-j|}$
 
 ### Generate Data
 
