@@ -118,7 +118,7 @@
 - :book: __Reading__:
     + ISL 6.2; ESL 3.4
     + APM 6.4
-- :microscope: __Lab 7__: RR and Lasso (Mar-05, due Mar-09)
+- :microscope: __Lab 7__: [Regularized Estimation](../labs/lab07-regularized-estimation.Rmd) (Mar-05, due Mar-09)
 
 -----
 
