@@ -132,7 +132,7 @@
 - :book: __Reading__:
     + ISL 4.1-4.3
     + APM 12.2
-- :microscope: __Lab 8__: Canonical Correlation Analysis (Mar-12, due Mar-16)
+- :microscope: __Lab 8__: [Logistic Regression](../labs/lab08-logistic-regression.pdf) (Mar-12, due Mar-16)
 - :dart: __HW 4:__ [Problem Set 4](../problems/problems4.pdf) (due: Mar-16 before midnight)
 
 -----
@@ -148,7 +148,7 @@
 - :book: __Reading__:
     + ISL 4.1-4.3; ESL 4.1 & 4.4
     + APM 12.2
-- :microscope: __Lab 9__: Logistic Regression (Mar-19, due Mar-23)
+- :microscope: __Lab 9__: Neural Nets (Mar-19, due Mar-23)
 - :mortar_board: __MIDTERM 1__: Friday Mar-16
 
 -----
