@@ -127,10 +127,10 @@
 - :card_index: __Dates__: Mar 05-09
 - :paperclip: __Topics__: Discussion of Canonical Correlation Anlysis and its modeling framework.
 - :file_folder: __Notes__:
-    + Continuum Regression Discussion (chalk and talk)
-    + Canonical Correlation Analysis "CCA" (chalk and talk)
+    + Continuum Regression Discussion (chalk and talk; slides in progress)
+    + Canonical Correlation Analysis "CCA" (chalk and talk; slides in progress)
 - :book: __Reading__:
-    + ISL 4.1-4.3
+    + ISL 4.1-4.3; ESL 3.4.6
     + APM 12.2
 - :microscope: __Lab 8__: [Logistic Regression](../labs/lab08-logistic-regression.pdf) (Mar-12, due Mar-16)
 - :dart: __HW 4:__ [Problem Set 4](../problems/problems4.pdf) (due: Mar-16 before midnight)
@@ -144,7 +144,7 @@
 - :file_folder: __Notes__:
     + [Logistic Regression (part I)](../slides/24-logistic-regression1.pdf)
     + [Logistic Regression (part II)](../slides/25-logistic-regression2.pdf)
-    + [Preamble to Discriminant Analysis](../slides/26-discriminant-preamble.pdf)
+    + [Classification Basics](../slides/26-classification-basics.pdf)
 - :book: __Reading__:
     + ISL 4.1-4.3; ESL 4.1 & 4.4
     + APM 12.2
@@ -153,13 +153,14 @@
 
 -----
 
-## Classification: Geometric Discriminant Analysis
+## Classification: Canonical Discriminant Analysis
 
 - :card_index: __Dates__: Mar 19-23
-- :paperclip: __Topics__: The origins and foundations of Discriminant Analysis (DA) are based on Ronald Fisher's geometric approach. This can be considered as classification with an unsupervised touch.
+- :paperclip: __Topics__: The origins and foundations of Discriminant Analysis (DA) are based on Ronald Fisher's geometric approach, also referred to as Canonical Discriminant Analysis (CDA). This can be considered to be a classification with an unsupervised touch.
 - :file_folder: __Notes__:
-    + [Geometric Discriminant Analysis (part I)](../slides/25-geometric-discriminant1.pdf)
-    + [Geometric Discriminant Analysis (part II)](../slides/26-geometric-discriminant2.pdf)
+    + [Preamble to Discriminant Analysis](../slides/27-discriminant-preamble.pdf)
+    + [Canonical Discriminant Analysis (part I)](../slides/28-canonical-discriminant1.pdf)
+    + [Canonical Discriminant Analysis (part II)](../slides/29-geometric-discriminant2.pdf)
 - :book: __Reading__:
     + ISL 4.4; ESL 4.2-4.3 
     + APM 12.3
