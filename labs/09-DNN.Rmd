@@ -1,0 +1,645 @@
+---
+title: "lab09-DNN"
+author: "Omid Shams Solari"
+date: "3/17/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Deep Learning in R: Short Overview of Packages
+
+CRAN has been enriched with more R deep learning packages; Below you can see an overview of these packages, taken from the Machine Learning and Statistical Learning CRAN task view. The "Percentile"" column indicates the percentile as found on RDocumentation:
+
+Package 	 Percentile  Description
+----------  -----------  ----------
+nnet 	        96th 	     Software for feed-forward neural networks with a single hidden layer, and for multinomial log-linear models.
+neuralnet 	  96th 	     Training of neural networks using backpropagation
+h2o 	        95th 	     R scripting functionality for H2O
+RSNNS 	      88th     	Interface to the Stuttgart Neural Network Simulator (SNNS)
+tensorflow   	88th     	Interface to TensorFlow
+deepnet     	84th     	Deep learning toolkit in R
+darch       	79th    	Package for Deep Architectures and Restricted Boltzmann Machines
+rnn         	73rd 	    Package to implement Recurrent Neural Networks (RRNs)
+FCNN4R      	52nd    	Interface to the FCNN library that allows user-extensible ANNs
+rcppDL      	7th     	Implementation of basic machine learning methods with many layers (deep learning), including dA (Denoising Autoencoder), SdA (Stacked Denoising Autoencoder), RBM (Restricted Boltzmann machine) and DBN (Deep Belief Nets)
+deepr        	??*     	 Package to streamline the training, fine-tuning and predicting processes for deep learning based on darch and deepnet
+MXNetR 	      ??*      	 Package that brings flexible and efficient GPU computing and state-of-art deep learning to R
+
+
+## Keras, keras and kerasR
+
+Recently, two new packages found their way to the R community: the kerasR package, which was authored and created by Taylor Arnold, and RStudio's keras package.
+
+Both packages provide an R interface to the Python deep learning package Keras, the Keras package offers Python users "a high-level neural networks API, written in Python and capable of running on top of either TensorFlow, Microsoft Cognitive Toolkit (CNTK) or Theano".
+
+### Interfaces?
+
+You see, getting started with Keras is one of the easiest ways to get familiar with deep learning in Python and that also explains why the kerasR and keras packages provide an interface for this fantastic package for R users.
+
+In this case, it's good for you to understand what it exactly means when a package, such as the R keras, is "an interface" to another package, the Python Keras. In simple terms, this means that the keras R package with the interface allows you to enjoy the benefit of R programming while having access to the capabilities of the Python Keras package.
+
+Note that this is not an uncommon practice: for example, also the h2o package provides an interface, but in this case -and as the name kind of already suggests- to H2O, an open source math engine for big data that you can use to compute parallel distributed machine learning algorithms. Other packages that you might know that provide interfaces are RWeka (R interface to Weka), tensorflow (R interface to TensorFlow), openml-r (R interface to OpenML), ... You can keep on going on and on!
+
+### What's the difference between Keras, keras and kerasR?
+
+Now that you know all of this, you might ask yourself the following question first: how would you compare the original Python package with the R packages?
+
+In essence, you won't find too many differences between the R packages and the original Python package, mostly because the function names are almost all the same; The only differences that you notice are mostly in the programming languages themselves (variable assignment, library loading, ...), but the most important thing to notice lies in the fact of how much of the original functionality has been incorporated in the R package.
+
+Secondly, you might also wonder what then the difference is between these two R packages. Well, if you want to consider how the two differ, you might want to consider the following points:
+
+ - The keras package uses the pipe operator (%>%) to connect functions or operations together, while kerasR uses of the $ operator to create models. The usage of the pipe operator generally improves the readability of your code.
+ 
+ - kerasR contains functions that are named in a similar, but not in completely the same way as the original Keras package. For example, the original (Python) compile() function is called keras_compile(); fit(), which becomes keras_fit(), or predict(), which is keras_predict in kerasR package.
+
+ - The installation of RStudio's keras package is easier than the installation of the kerasR package; To get the latter installed, you need to first make sure that you configure which Python version to use and this can get tricky if you're working on a pc that has multiple environments or Python versions installed.
+
+## Installing The keras Package
+
+As always, the first step to getting started with any package is to set up your workspace: install and load in the library into RStudio or whichever environment you're working in.
+
+No worries, for this tutorial, the package will be loaded in for you!
+
+First, make sure that you install the keras: you can easily do this by running devtools::install_github("rstudio/keras") in your console. Next, you can load in the package and install TensorFlow:
+
+```{r, eval=TRUE}
+#devtools::install_github("rstudio/keras")
+
+# Load the keras package
+library("keras")
+
+# Install Keras
+#install_keras()
+
+#install.packages("tensorflow")
+library(tensorflow)
+
+# Install TensorFlow
+#install_tensorflow()
+```
+
+## Loading Built-in Datasets
+
+You can pick to use one of the built-in datasets that comes with the keras package. With the Keras package in Python, one can access the Keras built-in datasets with functions such as mnist.load_data(), cifar10.load_data(), or imdb.load_data().
+
+```{r, eval=FALSE}
+# Read in MNIST data
+mnist <- dataset_mnist()
+
+# Read in CIFAR10 data
+cifar10 <- dataset_cifar10()
+
+# Read in IMDB data
+imdb <- dataset_imdb()
+```
+
+## Load Data File
+
+Besides the built-in datasets, you can also load in data from files. Let's use the read.csv() function from the read.table package to load in a data set from the UCI Machine Learning Repository:
+
+```{r, cache=TRUE}
+iris <- read.csv(url("http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"), header = FALSE) 
+
+# Return the first part of `iris`
+head(iris)
+
+# Inspect the structure
+str(iris)
+
+# Obtain the dimensions
+dim(iris)
+
+```
+
+
+## Data Exploration
+
+For this tutorial, you'll continue to work with the famous iris dataset that you imported with the read.csv() function. Here's some background information: all flowers contain a sepal and a petal. The sepal encloses the petals and is typically green and leaf-like, while the petals are typically colored leaves. For the iris flowers, this is just a little bit different, as you can see in the following picture:
+
+![ ](./iris-machinelearning.png)
+
+
+Next, use the iris variable in your data exploration to plot, for example, how the petal length and the petal width correlate using the plot() function and find the correlation between the Petal.Length and the Petal.Width for the different species of the iris flowers. Also find the overall correlation between all attributes that are included in the data set using cor() and corrplot():
+
+```{r, cache=TRUE}
+names(iris) <- c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species")
+
+plot(iris$Petal.Length, 
+     iris$Petal.Width, 
+     pch=21, bg=c("red","green3","blue")[unclass(iris$Species)], 
+     xlab="Petal Length", 
+     ylab="Petal Width")
+
+cor(iris$Petal.Length, iris$Petal.Width)
+
+# Store the overall correlation in `M`
+M <- cor(iris[,1:4])
+
+# Plot the correlation plot with `M`
+require("corrplot")
+corrplot(M, method="circle")
+
+```
+
+
+### Normalize Your Data With keras
+
+To use the normalize() function from the keras package, you first need to make sure that you're working with a matrix. As you probably remember from earlier, the characteristic of matrices is that the matrix data elements are of the same basic type; In this case, you have target values that are of type factor, while the rest is all numeric.
+
+
+```{r}
+iris[,5] <- as.numeric(iris[,5]) -1
+
+# Turn `iris` into a matrix
+iris <- as.matrix(iris)
+
+# Set iris `dimnames` to `NULL`
+dimnames(iris) <- NULL
+
+```
+
+A numerical data frame is alright, but you'll need to convert the data to an array or a matrix if you want to make use of the keras package. You can easily do this with the as.matrix() function; Don't forget here to set the dimnames to NULL.
+
+Now normalize your data using normalize() in keras package:
+
+```{r}
+# Normalize the `iris` data
+iris.norm <- normalize(iris[,1:4])
+
+# Return the summary of `iris`
+summary(iris.norm)
+
+```
+
+### Training And Test Sets
+
+Now that you have checked the quality of your data and you know that it's not necessary to normalize your data, you can continue to work with the original data and split it into training and test sets so that you're finally ready to start building your model. By doing this, you ensure that you can make honest assessments of the performance of your predicte model afterwards.
+
+Before you split your data into training and test sets, you best first set a seed. You can easily do this with set.seed(): use this exact function and just pass a random integer to it. A seed is a number of R's random number generator. The major advantage of setting a seed is that you can get the same sequence of random numbers whenever you supply the same seed in the random number generator.
+
+You use the sample() function to take a sample with a size that is set as the number of rows of the Iris data set, or 150. You sample with replacement: you choose from a vector of 2 elements and assign either 1 or 2 to the 150 rows of the Iris data set. The assignment of the elements is subject to probability weights of 0.67 and 0.33.
+
+
+```{r}
+# Determine sample size
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.67, 0.33))
+
+# Split the `iris` data
+iris.training <- iris[ind==1, 1:4]
+iris.test <- iris[ind==2, 1:4]
+
+# Split the class attribute
+iris.trainingtarget <- iris[ind==1, 5]
+iris.testtarget <- iris[ind==2, 5]
+
+```
+
+Side note: if you would have used a built-in dataset with the specific dataset_imdb() function, for example, your data can easily be split by using the $ operator:
+
+
+```{r, eval=FALSE}
+x_train <- imdb$train$x
+y_train <- imdb$train$y
+x_test <- imdb$test$x
+y_test <- imdb$test$y
+```
+
+### One-Hot Encoding
+
+When you want to model multi-class classification problems with neural networks, it is generally a good practice to make sure that you transform your target attribute from a vector that contains values for each class value to a matrix with a boolean for each class value and whether or not a given instance has that class value or not.
+
+
+keras has a to_categorical() function that will do all of this for you; Pass in the iris.trainingtarget and the iris.testtarget to this function and store the result in iris.trainLabels and iris.testLabels:
+
+
+```{r}
+iris.trainLabels <- to_categorical(iris.trainingtarget)
+
+# One hot encode test target values
+iris.testLabels <- to_categorical(iris.testtarget)
+
+# Print out the iris.testLabels to double check the result
+print(iris.testLabels)
+
+```
+
+### Constructing the Model
+
+To start constructing a model, you should first initialize a sequential model with the help of the keras_model_sequential() function. Then, you're ready to start modeling.
+
+Let's revisit the original question: can you predict the species of a certain Iris flower? 
+
+A type of network that performs well on such a problem is a multi-layer perceptron. This type of neural network is often fully connected. That means that you're looking to build a fairly simple stack of fully-connected layers to solve this problem. As for the activation functions that you will use, it's best to use one of the most common ones here for the purpose of getting familiar with Keras and neural networks, which is the relu activation function. This rectifier activation function is used in a hidden layer. Also a softmax activation function is used in the output layer to make sure that the output values are in the range of 0 and 1 and may be used as predicted probabilities:
+
+```{r}
+model <- keras_model_sequential() 
+
+# Add layers to the model
+model %>% 
+    layer_dense(units = 8, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+```
+
+
+Note how the output layer creates 3 output values, one for each Iris class (versicolor, virginica or setosa). The first layer, which contains 8 hidden notes, on the other hand, has an input_shape of 4. This is because the training data iris.training has 4 columns.
+
+You can further inspect your model with the following functions:
+
+
+  - You can use the summary() function to print a summary representation of your model;
+  - get_config() will return a list that contains the configuration of the model;
+  - get_layer() will return the layer configuration.
+  - layers attribute can be used to retrieve a flattened list of the model's layers;
+  - To list the input tensors, you can use the inputs attribute; and
+  - Lastly, to retrieve the output tensors, you can make use of the outputs attribute.
+
+```{r}
+# Print a summary of a model
+summary(model)
+
+# Get model configuration
+get_config(model)
+
+# Get layer configuration
+get_layer(model, index = 1)
+
+# List the model's layers
+model$layers
+
+# List the input tensors
+model$inputs
+
+# List the output tensors
+model$outputs
+
+```
+
+### Compile And Fit The Model
+
+Now that you have set up the architecture of your model, it's time to compile and fit the model to the data. To compile your model, you configure the model with the adam optimizer and the categorical_crossentropy loss function. Additionally, you also monitor the accuracy during the training by passing 'accuracy' to the metrics argument.
+
+
+```{r}
+# Compile the model
+model %>% compile(
+     loss = 'categorical_crossentropy',
+     optimizer = 'adam',
+     metrics = 'accuracy'
+ )
+```
+
+The optimizer and the loss are two arguments that are required if you want to compile the model.
+
+Some of the most popular optimization algorithms used are the Stochastic Gradient Descent (SGD), ADAM and RMSprop. Depending on whichever algorithm you choose, you'll need to tune certain parameters, such as learning rate or momentum. The choice for a loss function depends on the task that you have at hand: for example, for a regression problem, you'll usually use the Mean Squared Error (MSE).
+
+As you see in this example, you used categorical_crossentropy loss function for the multi-class classification problem of determining whether an iris is of type versicolor, virginica or setosa. However, note that if you would have had a binary-class classification problem, you should have made use of the binary_crossentropy loss function.
+
+Next, you can also fit the model to your data; In this case, you train the model for 200 epochs or iterations over all the samples in iris.training and iris.trainLabels, in batches of 5 samples.
+
+```{r, eval=FALSE}
+# Fit the model 
+model %>% fit(
+     iris.training, 
+     iris.trainLabels, 
+     epochs = 200, 
+     batch_size = 5, 
+     validation_split = 0.2
+ )
+```
+
+
+What you do with the code above is training the model for a specified number of epochs or exposures to the training dataset. An epoch is a single pass through the entire training set, followed by testing of the verification set. The batch size that you specify in the code above defines the number of samples that going to be propagated through the network. 
+
+### Visualize The Model Training History
+You can also visualize the fitting if you assign the lines of code above to a variable. You can then pass the variable to the plot() function.
+
+```{r, cache=TRUE}
+# Store the fitting history in `history` 
+history <- model %>% fit(
+     iris.training, 
+     iris.trainLabels, 
+     epochs = 200,
+     batch_size = 5, 
+     validation_split = 0.2
+ )
+
+# Plot the history
+plot(history)
+```
+
+
+Now split up these two plots and make two separate ones instead: make one for the model loss and another one for the model accuracy. Make use of the $ operator to access the data and plot it step by step.
+
+
+```{r}
+
+# Plot the model loss of the training data
+plot(history$metrics$loss, main="Model Loss", xlab = "epoch", ylab="loss", col="blue", type="l")
+
+# Plot the model loss of the test data
+lines(history$metrics$val_loss, col="green")
+
+# Add legend
+legend("topright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+
+# Plot the accuracy of the training data 
+plot(history$metrics$acc, main="Model Accuracy", xlab = "epoch", ylab="accuracy", col="blue", type="l")
+
+# Plot the accuracy of the validation data
+lines(history$metrics$val_acc, col="green")
+
+# Add Legend
+legend("bottomright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+
+```
+
+
+Some things to keep in mind here are the following:
+
+  - If your training data accuracy keeps improving while your validation data accuracy gets worse, you are probably overfitting: your model starts to just memorize the data instead of learning from it.
+  - If the trend for accuracy on both datasets is still rising for the last few epochs, you can clearly see that the model has not yet over-learned the training dataset.
+  
+  
+## Predict Labels of New Data
+
+Now you can use your model to predict the labels for your test set iris.test. As you might have expected, you can use the predict() function to do this. After, you can print out the confusion matrix to check out the predictions and the real labels of the iris.test data with the help of the table() function.
+
+
+```{r}
+# Predict the classes for the test data
+classes <- model %>% predict_classes(iris.test, batch_size = 128)
+
+# Confusion matrix
+table(iris.testtarget, classes)
+```
+
+
+## Evaluating Your Model
+
+Use the evaluate() function to evaluate your model on a test set: pass in the test data iris.test, the test labels iris.testLabels and define the batch size.
+
+```{r}
+# Evaluate on test data and labels
+score <- model %>% evaluate(iris.test, iris.testLabels, batch_size = 128)
+
+# Print the score
+print(score)
+```
+
+## Fine-tuning Your Model
+
+There are already two key decisions that you'll probably want to adjust: how many layers you're going to use and how many "hidden units"" you will chose for each layer.
+
+Besides playing around with the number of epochs or the batch size, there are other ways in which you can tweak your model in the hopes that it will perform better: by adding layers, by increasing the number of hidden units and by passing your own optimization parameters to the compile() function. This section will go over these three options.
+
+
+### Adding Layers
+
+What would happen if you add another layer to your model? What if it would look like this?
+
+```{r, cache=TRUE}
+# Initialize the sequential model
+model <- keras_model_sequential() 
+
+# Add layers to model
+model %>% 
+    layer_dense(units = 8, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 5, activation = 'relu') %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Compile the model
+model %>% compile(
+     loss = 'categorical_crossentropy',
+     optimizer = 'adam',
+     metrics = 'accuracy'
+ )
+
+# Fit the model to the data
+model %>% fit(
+     iris.training, iris.trainLabels, 
+     epochs = 200, batch_size = 5, 
+     validation_split = 0.2
+ )
+
+# Evaluate the model
+score <- model %>% evaluate(iris.test, iris.testLabels, batch_size = 128)
+
+# Print the score
+print(score)
+```
+
+You can also visualize the loss and accuracy metrics of this new model.
+
+```{r, cache=TRUE}
+# Initialize a sequential model
+model <- keras_model_sequential() 
+
+# Add layers to the model
+model %>% 
+    layer_dense(units = 8, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 5, activation = 'relu') %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Compile the model
+model %>% compile(
+     loss = 'categorical_crossentropy',
+     optimizer = 'adam',
+     metrics = 'accuracy'
+ )
+
+# Save the training history in history
+history <- model %>% fit(
+  iris.training, iris.trainLabels, 
+  epochs = 200, batch_size = 5,
+  validation_split = 0.2
+ )
+
+# Plot the model loss
+plot(history$metrics$loss, main="Model Loss", xlab = "epoch", ylab="loss", col="blue", type="l")
+lines(history$metrics$val_loss, col="green")
+legend("topright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+
+# Plot the model accuracy
+plot(history$metrics$acc, main="Model Accuracy", xlab = "epoch", ylab="accuracy", col="blue", type="l")
+lines(history$metrics$val_acc, col="green")
+legend("bottomright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+```
+
+
+### Hidden Units
+
+Try out the effect of adding more hidden units to your model's architecture and study the effect on the evaluation:
+
+```{r, cache=TRUE}
+# Initialize a sequential model
+model <- keras_model_sequential() 
+
+# Add layers to the model
+model %>% 
+    layer_dense(units = 28, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Compile the model
+model %>% compile(
+     loss = 'categorical_crossentropy',
+     optimizer = 'adam',
+     metrics = 'accuracy'
+ )
+
+# Fit the model to the data
+model %>% fit(
+     iris.training, iris.trainLabels, 
+     epochs = 200, batch_size = 5, 
+     validation_split = 0.2
+ )
+
+# Evaluate the model
+score <- model %>% evaluate(iris.test, iris.testLabels, batch_size = 128)
+
+# Print the score
+print(score)
+```
+
+Why don't you try visualizing the effect of the addition of the hidden nodes in your model?
+
+```{r, cache=TRUE}
+# Initialize the sequential model
+model <- keras_model_sequential() 
+
+# Add layers to the model
+model %>% 
+    layer_dense(units = 28, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Compile the model
+model %>% compile(
+     loss = 'categorical_crossentropy',
+     optimizer = 'adam',
+     metrics = 'accuracy'
+ )
+
+# Save the training history in the history variable
+history <- model %>% fit(
+  iris.training, iris.trainLabels, 
+  epochs = 200, batch_size = 5, 
+  validation_split = 0.2
+ )
+
+# Plot the model loss
+plot(history$metrics$loss, main="Model Loss", xlab = "epoch", ylab="loss", col="blue", type="l")
+lines(history$metrics$val_loss, col="green")
+legend("topright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+
+# Plot the model accuracy
+plot(history$metrics$acc, main="Model Accuracy", xlab = "epoch", ylab="accuracy", col="blue", type="l")
+lines(history$metrics$val_acc, col="green")
+legend("bottomright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+```
+
+### Optimization Parameters
+
+Besides adding layers and playing around with the hidden units, you can also try to adjust (some of) the parameters of the optimization algorithm that you give to the compile() function.
+
+Now experiment with other optimization algorithms, like the Stochastic Gradient Descent (SGD). Try, for example, using the optimizer_sgd() function to adjust the learning rate lr. Do you notice an effect?
+
+```{r, cache=TRUE}
+# Initialize a sequential model
+model <- keras_model_sequential() 
+
+# Build up your model by adding layers to it
+model %>% 
+    layer_dense(units = 8, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Define an optimizer
+sgd <- optimizer_sgd(lr = 0.01)
+
+# Use the optimizer to compile the model
+model %>% compile(optimizer=sgd, 
+                  loss='categorical_crossentropy', 
+                  metrics='accuracy')
+
+# Fit the model to the training data
+model %>% fit(
+     iris.training, iris.trainLabels, 
+     epochs = 200, batch_size = 5, 
+     validation_split = 0.2
+ )
+
+# Evaluate the model
+score <- model %>% evaluate(iris.test, iris.testLabels, batch_size = 128)
+
+# Print the loss and accuracy metrics
+print(score)
+
+```
+
+Besides using another optimizer, you can also try using a smaller learning rate to train your network. This is one of the most common fine-tuning techniques; A common practice is to make the initial learning rate 10 times smaller than the one that you used to train the model before.
+
+Now visualize the training history one more time to see the effect of this small adjustment:
+
+```{r, cache=TRUE}
+# Initialize a sequential model
+model <- keras_model_sequential() 
+
+# Build up your model by adding layers to it
+model %>% 
+    layer_dense(units = 8, activation = 'relu', input_shape = c(4)) %>% 
+    layer_dense(units = 3, activation = 'softmax')
+
+# Define an optimizer
+sgd <- optimizer_sgd(lr = 0.01)
+
+# Compile the model
+model %>% compile(optimizer=sgd, 
+                  loss='categorical_crossentropy', 
+                  metrics='accuracy')
+
+# Fit the model to the training data
+history <- model %>% fit(
+  iris.training, iris.trainLabels, 
+  epochs = 200, batch_size = 5, 
+  validation_split = 0.2
+ )
+
+# Plot the model loss
+plot(history$metrics$loss, main="Model Loss", xlab = "epoch", ylab="loss", col="blue", type="l")
+lines(history$metrics$val_loss, col="green")
+legend("topright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+
+# Plot the model accuracy
+plot(history$metrics$acc, main="Model Accuracy", xlab = "epoch", ylab="accuracy", col="blue", type="l")
+lines(history$metrics$val_acc, col="green")
+legend("bottomright", c("train","test"), col=c("blue", "green"), lty=c(1,1))
+```
+
+## Saving, Loading or Exporting Your Model
+
+  - Make use of the save_model_hdf5() and load_model_hdf5() functions to save and load your model into your workspace:
+  
+```{r, eval=FALSE}
+save_model_hdf5(model, "my_model.h5")
+model <- load_model_hdf5("my_model.h5")
+```
+
+  - Save and load the model weights with the save_model_weights_hdf5() and load_model_weights_hdf5() functions:
+  
+```{r, eval=FALSE}
+save_model_weights_hdf5("my_model_weights.h5")
+model %>% load_model_weights_hdf5("my_model_weights.h5")
+```
+
+  - Export your model configuration to JSON or YAML. Here, the functions model_to_json() and model_to_yaml() will help you out. To load the configurations back into your workspace, you can just use the model_from_json() and model_from yaml() functions:
+  
+```{r, eval=FALSE}
+json_string <- model_to_json(model)
+model <- model_from_json(json_string)
+
+yaml_string <- model_to_yaml(model)
+model <- model_from_yaml(yaml_string)
+```
+
