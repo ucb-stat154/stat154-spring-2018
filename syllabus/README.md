@@ -158,9 +158,10 @@
 - :card_index: __Dates__: Mar 19-23
 - :paperclip: __Topics__: The origins and foundations of Discriminant Analysis (DA) are based on Ronald Fisher's geometric approach, also referred to as Canonical Discriminant Analysis (CDA). This can be considered to be a classification with an unsupervised touch.
 - :file_folder: __Notes__:
-    + [Preamble to Discriminant Analysis](../slides/27-discriminant-preamble.pdf)
-    + [Canonical Discriminant Analysis (part I)](../slides/28-canonical-discriminant1.pdf)
-    + [Canonical Discriminant Analysis (part II)](../slides/29-geometric-discriminant2.pdf)
+    + [Preamble to Discriminant Analysis (part I)](../slides/27-discriminant-preamble1.pdf)
+    + [Preamble to Discriminant Analysis (part II)](../slides/28-discriminant-preamble2.pdf)
+    + [Canonical Discriminant Analysis (part I)](../slides/29-canonical-discriminant1.pdf)
+    + [Canonical Discriminant Analysis (part II)](../slides/30-geometric-discriminant2.pdf)
 - :book: __Reading__:
     + ISL 4.4; ESL 4.2-4.3 
     + APM 12.3
