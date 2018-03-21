@@ -24,7 +24,7 @@ __Statistics 154: Modern Statistical Prediction and Machine Learning__ at UC Ber
 
 ### Description
 
-This is an introductory-level course in statistical learning, with an emphasis on regression and classification methods, and a pinch of unsupervised methods. The course includes the following topics (not necessarily in the displayed order, see [syllabus](syllabus) for more info):
+This is an introductory-level course in statistical learning, with an emphasis on regression and classification methods, and a pinch of unsupervised methods. The course includes, time permiting, the following topics (not necessarily in the displayed order, see [syllabus](syllabus) for more info):
 
 - Process of predictive model building
 - Data Preprocessing
