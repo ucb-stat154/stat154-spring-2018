@@ -164,7 +164,7 @@
 - :book: __Reading__:
     + ISL 4.4; ESL 4.2-4.3 
     + APM 12.3
-- :microscope: __Lab 10__: Discriminant Analysis (Apr-02)
+- :microscope: __Lab 10__: [Canonical Discriminant Analysis](../labs/lab10-canonical-discriminant.pdf) (Apr-02)
 - :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
 
 -----
