@@ -165,7 +165,6 @@
     + ISL 4.4; ESL 4.2-4.3 
     + APM 12.3
 - :microscope: __Lab 10__: [Canonical Discriminant Analysis](../labs/lab10-canonical-discriminant.pdf) (Apr-02)
-- :dart: __HW 5:__ Problem Set 5 (due: Apr-06 before midnight)
 
 -----
 
@@ -183,6 +182,7 @@
     + ISL 4.4; ESL 4.3
     + APM 13.5
 - :microscope: __Lab 11__: Comparing Classification Methods (Apr-09)
+- :dart: __HW 5:__ [Problem Set 5](../problems/problems5.pdf) (due: Apr-13 before midnight)
 
 -----
 
@@ -198,7 +198,7 @@ agglomerative techniques.
 - :book: __Reading__:
     + ISL 10; ESL 14.3
 - :microscope: __Lab 12__: Clustering (Apr-16)
-- :dart: __HW 6:__ Problem Set 6 (due: Apr-20 before midnight)
+- :dart: __HW 6:__ Problem Set 6 (due: Apr-27 before midnight)
 
 -----
 
