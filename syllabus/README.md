@@ -173,7 +173,7 @@
 - :card_index: __Dates__: Apr 02-06
 - :paperclip: __Topics__: Presentation of the probabilistic framework for classiciation purposes with the so-called Bayes Classifier. We move on from geometric DA to Probabilistic DA, and also discuss the non-parametric method kNN.
 - :file_folder: __Notes__:
-    + [Classification](../slides/27-classification.pdf) (slides by Hastie and Tibshirani)
+    + [Classification](../slides/30-classification.pdf) (slides by Hastie and Tibshirani)
         + Bayes Classifier
         + Linear and Quadratic Discriminant Analysis
         + K-Nearest Neighbors (kNN)
