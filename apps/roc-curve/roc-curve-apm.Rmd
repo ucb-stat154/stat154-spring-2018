@@ -1,0 +1,190 @@
+---
+title: "ROC Curve"
+subtitle: "Stat 154, Fall 2017"
+author: "Gaston Sanchez"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(AppliedPredictiveModeling)
+library(caret)
+library(ggplot2)
+library(MASS)
+library(pROC)
+```
+
+This document is based on the simulation study discussed in Chapter 11, from
+_Applied Predictive Modeling_ by Kuhn and Johnson (2013).
+
+The required R packages are:
+
+```r
+library(AppliedPredictiveModeling)
+library(caret)
+library(ggplot2)
+library(MASS)
+library(pROC)
+```
+
+
+## Introduction
+
+"The ROC curve is used for determining alternate cutoffs for class probabilities.
+This curve is created by evaluating the class probabilities for the model
+across a continuum of thresholds. For each candidate threshold, the resulting
+true positive rate (i.e. sensitivity) and the false-positive rate (1 - specificity)
+are plotted against each other." (Kuhn and Johnson, 2013)"
+
+
+-----
+
+
+## Simulated Data
+
+A simulated data set with two predictors, and one response variable with two
+classes is obtained with `quadBoundaryFunc()`
+
+```{r sim_train}
+# simulated data with function quadBoundaryFunc() which
+# creates a class boundary that is a function of both predictors. 
+set.seed(975)
+simulated_train <- quadBoundaryFunc(500)
+
+head(simulated_train)
+```
+
+Let's see what the data looks like:
+
+```{r scatter1, fig.align='center'}
+ggplot(simulated_train, aes(x = X1, y = X2)) + 
+  geom_vline(xintercept = 0, color = 'gray70') + 
+  geom_hline(yintercept = 0, color = 'gray70') +
+  geom_point(aes(color = class), alpha = 0.8)
+```
+
+We can add density curves to visualize the ellipses:
+
+```{r scatter2, , fig.align='center'}
+ggplot(simulated_train, aes(x = X1, y = X2)) + 
+  geom_vline(xintercept = 0, color = 'gray70') + 
+  geom_hline(yintercept = 0, color = 'gray70') +
+  geom_density2d(color = 'gray60') +
+  geom_point(aes(color = class), alpha = 0.8)
+```
+
+
+-----
+
+
+## Linear Discriminant Analysis (LDA)
+
+We begin the classification model building process by fitting a model using
+linear discriminant analysis. This is done with the function `lda()` from 
+`"MASS"`:
+
+```{r lda}
+# LDA
+lda_fit <- lda(class ~ X1 + X2, data = simulated_train)
+lda_pred_train <- predict(lda_fit, simulated_train)
+```
+
+Using the predictions, we can get the following confussion matrix:
+
+```{r lda_confussion}
+lda_confussion <- table(obs = simulated_train$class, pred = lda_pred_train$class)
+lda_confussion
+```
+
+and the associated _default_ error rate given by:
+
+```{r}
+# error rate (misclasification rate)
+1 - sum(diag(lda_confussion)) / nrow(simulated_train)
+```
+
+
+-----
+
+
+### Quadratic Discriminant Analysis (QDA)
+
+The second model involves fitting a QDA with the function `qda()` from 
+`"MASS"`:
+
+```{r qda)}
+# QDA
+qda_fit <- qda(class ~ X1 + X2, data = simulated_train)
+qda_pred_train <- predict(qda_fit, simulated_train)
+```
+
+Confussion matrix:
+
+```{r qda_confussion}
+qda_confussion <- table(obs = simulated_train$class, pred = qda_pred_train$class)
+qda_confussion
+```
+
+and the _default_ error rate is:
+
+```{r qda_error}
+1 - sum(diag(qda_confussion)) / nrow(simulated_train)
+```
+
+
+-----
+
+
+## ROC Curve
+
+
+Add LDA and QDA posterior probabilities for Class 1 to the data frame of 
+simulated data:
+
+```{r}
+# adding predicted class-1 probabilities
+simulated_train$ldaprob <- lda_pred_train$posterior[ ,"Class1"]
+simulated_train$qdaprob <- qda_pred_train$posterior[ ,"Class1"]
+```
+
+
+One way to obtain ROC curves is with the `"pROC"` package. To get such a curve,
+you need to create a `"roc"` object with the function `roc()`.
+
+```{r lda_roc}
+# ROC Curve for LDA
+lda_train_roc <- roc(
+  response = simulated_train$class,
+  predictor = simulated_train$ldaprob,
+  # this function assumed that the second class
+  # is the event of interest, so labels msut be reversed
+  levels = rev(levels(simulated_train$class))
+)
+
+# ROC curve
+plot(lda_train_roc, legacy.axes = TRUE, las = 1)
+```
+
+The ROC curve for QDA can be obtained as follows:
+
+```{r qda_roc}
+# ROC Curve for QDA
+qda_train_roc <- roc(
+  response = simulated_train$class,
+  predictor = simulated_train$qdaprob,
+  levels = rev(levels(simulated_train$class))
+)
+
+# ROC curve
+plot(qda_train_roc, legacy.axes = TRUE, las = 1)
+```
+
+Both curves, can be plotted in the same figure:
+
+```{r lda_qda_curves}
+# ROC curves
+plot(lda_train_roc, legacy.axes = TRUE, las = 1, 
+     col = "#2f74e2", lwd = 3)
+plot(qda_train_roc, legacy.axes = TRUE, las = 1, 
+     col = "tomato", lwd = 3, add = TRUE)
+```
