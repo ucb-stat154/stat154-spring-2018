@@ -181,7 +181,7 @@
 - :book: __Reading__:
     + ISL 4.4; ESL 4.3
     + APM 13.5
-- :microscope: __Lab 11__: Comparing Classification Methods (Apr-09)
+- :microscope: __Lab 11__: [Comparing Classification Methods](../labs/lab11-classification-comparison.pdf) (Apr-09)
 - :dart: __HW 5:__ [Problem Set 5](../problems/problems5.pdf) (due: Apr-13 before midnight)
 
 -----
