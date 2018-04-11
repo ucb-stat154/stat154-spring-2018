@@ -193,8 +193,9 @@
 learning tool of the course, covering partition methods as well as hierarchical 
 agglomerative techniques.
 - :file_folder: __Notes__:
-    + K-means clustering
-    + Hierarchical Clustering
+    + [Unsupervised](../slides/31-unsupervised.pdf) (slides by Hastie and Tibshirani)
+        + K-means clustering
+        + Hierarchical Clustering
 - :book: __Reading__:
     + ISL 10; ESL 14.3
 - :microscope: __Lab 12__: Clustering (Apr-16)
