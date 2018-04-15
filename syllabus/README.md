@@ -198,7 +198,7 @@ agglomerative techniques.
     + Hierarchical Clustering
 - :book: __Reading__:
     + ISL 10; ESL 14.3
-- :microscope: __Lab 12__: Clustering (Apr-16)
+- :microscope: __Lab 12__: [Clustering](../labs/lab12-clustering.pdf) (Apr-16)
 - :dart: __HW 6:__ Problem Set 6 (due: Apr-27 before midnight)
 
 -----
