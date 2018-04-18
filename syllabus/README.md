@@ -178,6 +178,7 @@
         + Linear and Quadratic Discriminant Analysis
         + K-Nearest Neighbors (kNN)
     + Discriminant Analysis Synthesis (chalk and talk)
+    + [Classification Performance Measures](../apps/roc-curve/roc-curve-apm.md)    
 - :book: __Reading__:
     + ISL 4.4; ESL 4.3
     + APM 13.5
@@ -208,9 +209,8 @@ agglomerative techniques.
 - :card_index: __Dates__: Apr 16-20
 - :paperclip: __Topics__: Summary of classifications methods, and introduction to decision trees as well as Tree-based methods.
 - :file_folder: __Notes__:
-    + [Classification Performance Measures](../apps/roc-curve/roc-curve-apm.md)
-    + [Introduction to Decision Trees](../slides/28-trees-introduction.pdf)
-    + [More about decision trees](../slides/29-decision-trees.pdf)
+    + [Introduction to Decision Trees](../slides/35-trees-introduction.pdf)
+    + [More about decision trees](../slides/36-decision-trees.pdf)
 - :book: __Reading__:
     + ISL 4; ESL 9.2
     + APM 11
