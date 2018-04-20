@@ -200,7 +200,6 @@ agglomerative techniques.
 - :book: __Reading__:
     + ISL 10; ESL 14.3
 - :microscope: __Lab 12__: [Clustering](../labs/lab12-clustering.pdf) (Apr-16)
-- :dart: __HW 6:__ Problem Set 6 (due: Apr-27 before midnight)
 
 -----
 
@@ -215,6 +214,7 @@ agglomerative techniques.
     + ISL 4; ESL 9.2
     + APM 11
 - :microscope: __Lab 13__: TBA (Apr-23)
+- :dart: __HW 6:__ [Problem Set 6](../problems/problems6/problems6.mf) (due: May-04 before midnight)
 
 -----
 
