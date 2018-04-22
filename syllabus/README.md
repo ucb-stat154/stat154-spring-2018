@@ -213,7 +213,7 @@ agglomerative techniques.
 - :book: __Reading__:
     + ISL 4; ESL 9.2
     + APM 11
-- :microscope: __Lab 13__: TBA (Apr-23)
+- :microscope: __Lab 13__: [Tree based methods](../labs/lab13-tree-based-methods.pdf) (Apr-23)
 - :dart: __HW 6:__ [Problem Set 6](../problems/problems6/problems6.mf) (due: May-04 before midnight)
 
 -----
@@ -224,7 +224,7 @@ agglomerative techniques.
 - :paperclip: __Topics__: More about tree-based methods.
 - :file_folder: __Notes__:
     + [Intro to `rpart`](../papers/Intro-to-rpart.md)
-    + [Tree-based methods](../slides/30-tree-based-methods.pdf) (slides by Hastie and Tibshirani)
+    + [Tree-based methods](../slides/37-tree-based-methods.pdf) (slides by Hastie and Tibshirani)
         + Bagging
         + Random Forest
 - :book: __Reading__:
