@@ -1,0 +1,297 @@
+---
+title: "Partition Trees with `rpart`"
+author: "Gaston Sanchez"
+output: github_document
+fontsize: 11pt
+urlcolor: blue
+---
+
+> ### Learning Objectives:
+>
+> - Introduction to the `rpart()` function
+> - Understand parameters
+> - Understand control parameters
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library(rpart)
+```
+
+------
+
+## Decision Trees in R
+
+The source code of the CART (Classification and Regression Trees) method, 
+developed by Jerome Friedman, is proprietary software of Salford Systems.
+However, a close implementation of CART in R is provided by the package 
+`"tree"` and the more famous package `"rpart"`.
+
+```{r eval = FALSE}
+# install.packages("rpart")
+library(rpart)
+```
+
+## Function `rpart()`
+
+The main function of `"rpart"` is the homonym function `rpart()` which allows
+you to build both classification and regression trees.
+
+There are several ways in which you can use `rpart()`. So let's review its 
+bells and whistles.
+
+The three main arguments that you should pass to `rpart()` are: 
+
+1. a `formula` indicating the response and the predictor variables
+2. a `data` frame containing the variables
+3. a `method` specifying whether a regression tree
+(`method = "anova"`) or a classifiction tree (`method = "class"`) should be
+computed.
+
+For illustration purposes, let's see how to invoke `rpart()` to fit a 
+classification tree for `Species` with the `iris` data set:
+
+```{r}
+# classification tree
+iris_tree <- rpart(Species ~ ., data = iris, method = "class")
+```
+
+`rpart()` returns an object of class `"rpart"` that, when printed, displays
+some information about the obtained tree and its nodes:
+
+```{r}
+# rpart object
+iris_tree
+```
+
+As you can tell from the output of `rpart()`, there are three main pieces of
+information:
+
+- The first line shows the total number of individuals in the root node: `n = 150`
+
+- The second line shows the labels (legends) `node), split, n, loss, yval, (yprob)` 
+to be used when reading the third part of the output:
+
+- The third (and major) part of the output shows all the nodes in the tree;
+starting with the first node which is the root node; the numbers inside the
+parentheses correspond to the class proportions.
+
+Tree-based models automatically select the more relevant variables. This means
+that not all variable need to appear in the tree. In the previous example, 
+only the variables `Petal.Length` and `Petal.Width` are used to fit the tree.
+
+You read the tree output from the _root node_ that is marked with the number
+`1)`. The `print()` method associated to an object `"rpart"` provides some
+information of the data in this node. Namely, we can observe that we have 150
+observations at this node, of which 100 have a different class from `setosa`,
+and the corresponding relative frequencies (or probabilities) of each class.
+
+Each node of a tree has two branches or partitions. For instance, from the 
+root node we have a branch `2)` where the split criterion is 
+`Petal.Length< 2.45`. If an observation has `Petal.Length< 2.45`, then it is
+labeled as class `setosa`. In fact, all samples are of the same class. 
+Likewise, from node `3)` the split condition is `Petal.Length>=2.45`, and 
+two more nodes are derived from this partition: `6)` and `7)`.
+
+
+### `plot()`ing a tree
+
+In addition to the `print()` method of an object of class `"rpart"`, there is 
+also a `plot()` method that produces a visual display of the tree. By the way,
+when plotting an `"rpart"` tree you will also need to call `text()`:
+
+```{r plot_rpart}
+# basic (ugly) tree plot
+plot(iris_tree)
+text(iris_tree)
+```
+
+As you can tell, the output of `plot()` and `text()` tends to be kind of ugly.
+`plot()` controls the graphical representation of the tree, the layout of the
+nodes, their spacing, the form of the branches, and the margins of the graphic.
+`text()`, on the other hand, adds labels and numeric information.
+
+To get a prettier tree, you may want to tweak the `margin` of the plot figure,
+and set to `TRUE` various parameters of `text()`:
+
+```{r plot_rpart2}
+# less basic tree plot
+plot(iris_tree, margin = 0.15)
+text(iris_tree, fancy = TRUE, use.n = TRUE, all = TRUE)
+```
+
+- `all = TRUE` labels all nodes
+- `fancy = TRUE` shows internal nodes as ellipses, and the terminal nodes 
+(i.e. the leafs) as rectangles
+- `use.n = TRUE` displays the number of observations of each class
+
+Here's another option to plot a tree:
+
+```{r plot_rpart3}
+# another less basic tree plot
+plot(iris_tree, margin = 0.15, branch = 0.2)
+text(iris_tree, fancy = TRUE, use.n = TRUE, all = TRUE)
+```
+
+
+In practice, trees are typically obtained in two steps. The first step involves
+growing a large tree. Then, the second step involves pruning the tree by 
+deleting bottom nodes through a process of penalized complexity. The main reason 
+for this pruning process is to avoid overfitting. Why? Because overly large 
+decision trees will fit the (training) data almost perfectly, but will also be
+learning the unique noise associated to the data.
+
+By default, `rpart()` grows a tree until some stopping critera are met. Namely,
+the tree stops growing whenever: 1) the decrease in the purity goes below a 
+certain threshold; when 2) the number of observations in the node is less than 
+another threshold; or when 3) the tree depth exceeds a certain value.
+These stopping criteria are controlled by the parameters `cp`, `minsplit`, 
+and `maxdepth`.
+
+
+-----
+
+## Classification Tree with `Heart` data
+
+Let's consider a slightly larger data set: the `Heart` data that comes from the
+ISL website (there's a copy of the file in the `data/` folder of the course github repository):
+
+```{r echo = FALSE}
+dat <- read.csv('../data/Heart.csv', row.names = 1)
+```
+
+[http://www-bcf.usc.edu/~gareth/ISL/Heart.csv](http://www-bcf.usc.edu/~gareth/ISL/Heart.csv)
+
+```{r eval = FALSE}
+dat <- read.csv('Heart.csv', row.names = 1)
+```
+
+The `Heart` data set contains a binary outcome `AHD` for `r nrow(dat)` patients
+who presented with chest pain. An outcome value of `Yes` indicates the presence
+of heart disease based on an angiographic test, while `No` means no heart 
+disease. There are `r ncol(dat) - 1` predictors including `Age`, `Sex`, 
+`ChestPain`, and other heart and lung function measurements.
+
+Here's how to fit a tree with default parameters:
+
+```{r}
+# classification tree
+tree0 <- rpart(AHD ~ ., data = dat, method = "class")
+
+tree0
+```
+
+and here's the tree diagram
+
+```{r plot_rpart4}
+# another less basic tree plot
+plot(tree0, margin = 0.1, uniform = TRUE)
+text(tree0, fancy = FALSE, use.n = TRUE, all = TRUE)
+```
+
+
+## More `rpart()` parameters
+
+The function `rpart()` provides more parameters such as `parms`, `control`, 
+and `cost`.
+
+The argument `parms` takes a list of optional elements:
+
+- `split` = the splitting index (or splitting criterion):
+    + `"gini"` for the Gini index
+    + `"information"` for the entropy
+- `prior` = optional vector of prior probabilities
+- `loss` = you can also specify a matrix of `loss` components
+- Note that when fitting a classfication tree (`method = "class"`), 
+`rpart()` uses the Gini index as the splitting criterion.
+
+
+The argument `control` takes a list with:
+
+- `minsplit` = minimum number of observations inside a node
+- `minbucket` = minimum number of observations inside a node
+- `cp` = complexity parameter
+- `maxdepth` = maximum depth level
+- _other parameters_ see (`?rpart.control`)
+
+The argumet `cost` is a vector of non-negative costs, one for each variable in 
+the model. Think of costs as scaling factors. By default, all variables have 
+cost one.
+
+
+### Cost Complexity
+
+The `rpart()` function implements a pruning method called _cost complexity_
+pruning. This method uses the values of the parameter `cp` that is calculated
+for each node of the tree. The pruning method tries to estimate the value
+of `cp` that ensures the best compromise between predictive accuracy and the
+tree size.
+
+Given an `"rpart"` tree, it is possible to obtain a set of sub-trees of this 
+tree and estimate their predictive performance.
+
+The argument `cp` refers to the _complexity parameter_
+
+- a value of `cp = 0`, the tree is grown to its maximum depth
+- a value of `cp > 0`, attempts to grow a tree of less depth
+
+
+
+### Method `summary()`
+
+You can also use a `summary()` method on an `"rpart"` object. This will 
+produce a large output plenty of information:
+
+- The `CP` cost complexity 
+- The _Variable importance_, normalized in order to have a total sum of 100
+- Summaries for each node:
+    + Predicted class, expected loss
+    + class counts
+    + The _Primary_ (chosen) splits
+    + The _Surrogate_ splits
+
+```{r}
+# summary information
+summary(tree0, digits = 3)
+```
+
+
+### Complexity and Pruning
+
+In addition to `summary()`, you can also use `printcp()` which allows you to
+get more information about the complexity of the tree. More precisely, 
+`printcp()` prints a table of optimal prunings based on a complexity parameter.
+
+`rpart()` implements a pruning method called _cost complexity_ pruning. This
+method uses the values of the parameter `cp` that R calculates for each node
+of the tree. The pruning method tries to estimate the value of `cp` that 
+ensures the best compromise between predictive accuracy and tree size.
+
+Given a tree obtained with the `rpart()` function, R can produce a set of 
+sub-trees of this tree and estimate their predictive performance. This 
+information can be obtained using the function `printcp()` which displays the 
+so-called _CP Table_:
+
+```{r}
+# CP table
+printcp(tree0)
+```
+
+The CP table has five columns:
+
+- `CP` = complexity parameter
+- `nsplit` = number of splits (or tests)
+- `rel error` = relative error
+- `xerror` = cross-validation error
+- `xstd` = cross-validation standard deviation
+
+The root node corresponds to `nsplit` = 0. The tree produced by `rpart()` is 
+the last tree of this table: `nsplit` = 5.
+
+The error rates are relative to the root node, this is why the `rel error` 
+of the root node has a reference value of 1.
+
+As for the column `CP`, the fitted `tree0` has a `cp` value of 0.01, which is 
+actually the default value of this parameter. It includes five tests and has a 
+relative error (compared to the root node) of 0.33813. However, `rpart()` uses 
+an internal process of ten-fold cross-validation, that this tree will have an 
+average relative error of 0.38129 $\pm$ 0.047574. 
+
